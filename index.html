@@ -8,6 +8,10 @@
 
     <!-- Normalize -->
     <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="font/flaticon.css">
+
     <!-- Styles perso -->
     <link rel="stylesheet" href="css/styles.css">
 
@@ -24,7 +28,7 @@
 
         <!-- SECTION : ABOUT -->
 
-        <a href="#" class="section-close">X</a>
+        <a href="#" class="section-close"><span class="flaticon-close"></span></a>
         <section class="home about">
 
             <div class="section-title">A propos de moi</div>
@@ -38,7 +42,7 @@
 
         <!-- SECTION : WORK -->
 
-        <a href="#" class="section-close">X</a>
+        <a href="#" class="section-close"><span class="flaticon-close"></span></a>
         <section class="home work">
 
             <div class="section-title">Mes projects</div>
@@ -49,9 +53,9 @@
         </section>
 
 
-        <!-- SECTION : WORK -->
+        <!-- SECTION : SKILL -->
 
-        <a href="#" class="section-close">X</a>
+        <a href="#" class="section-close"><span class="flaticon-close"></span></a>
         <section class="home skill">
 
             <div class="section-title">Mes compétences</div>
@@ -66,7 +70,7 @@
 
         <!-- SECTION : CONTACT -->
 
-        <a href="#" class="section-close">X</a>
+        <a href="#" class="section-close"><span class="flaticon-close"></span></a>
         <section class="home contact">
 
             <div class="section-title">Contact</div>
@@ -78,26 +82,31 @@
         </section>
     </main>
 
+
     
-    
-    
-    
-    
-    
-    
-    <script src="js/jquery-3.1.1.js"></script>
+    <!-- JQuery -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+
+    <!-- Plugin JQuery -->
+
+    <script src="js/jquery.transit.min.js"></script>
 
     <script>
 
         $(document).ready(function() {
 
-            /*Quand on clique sur le titre */
+            /**************Quand on clique sur intro *************/
 
             $(".intro-title").on("click", btnintro);
 
             function btnintro () {
+//                $("section").css({
+//                    "z-index" : "1",
+//                    "width" : "50%",
+//                    "height" : "50%",
+//                });
                 $("section").css({
-                    "z-index" : "1",
+                    "animation" : "intro-section 1s ease-out",
                     "width" : "50%",
                     "height" : "50%",
                 });
@@ -119,7 +128,7 @@
                 $(this).css({
                     "z-index" : "100",
                     "width" : "100%",
-                    "height" : "100%",
+                    "height" : "100%"
                 });
 
                 //On affiche le bouton close
