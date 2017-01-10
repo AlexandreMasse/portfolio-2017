@@ -16,6 +16,12 @@
 <body>
     <main>
 
+
+        <div class="intro-title">
+            <p>Alexandre Massé</p>
+            <p>MON PORTFOLIO</p>
+        </div>
+
         <!-- SECTION : ABOUT -->
 
         <a href="#" class="section-close">X</a>
@@ -85,7 +91,20 @@
 
         $(document).ready(function() {
 
+            /*Quand on clique sur le titre */
+
+            $(".intro-title").on("click", btnintro);
+
+            function btnintro () {
+                $("section").css({
+                    "z-index" : "1",
+                    "width" : "50%",
+                    "height" : "50%",
+                });
+            };
+
             /**************Quand on clique sur une section*******/
+
 
             $("section" ).on("click", showSection);
 
@@ -98,7 +117,7 @@
                 //Section prend tout l'écran
 
                 $(this).css({
-                    "z-index" : "50",
+                    "z-index" : "100",
                     "width" : "100%",
                     "height" : "100%",
                 });
