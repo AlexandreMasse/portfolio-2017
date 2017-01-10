@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Styles perso -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Portfolio - Alexandre Massé</title>
+</head>
+<body>
+    <main>
+
+        <!-- SECTION : ABOUT -->
+
+        <a href="#" class="section-close">X</a>
+        <section class="home about">
+
+            <div class="section-title">A propos de moi</div>
+
+            <div class="section-container">
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION : WORK -->
+
+        <a href="#" class="section-close">X</a>
+        <section class="home work">
+
+            <div class="section-title">Mes projects</div>
+
+            <div class="section-container">
+
+            </div>
+        </section>
+
+
+        <!-- SECTION : WORK -->
+
+        <a href="#" class="section-close">X</a>
+        <section class="home skill">
+
+            <div class="section-title">Mes compétences</div>
+
+            <div class="section-container">
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SECTION : CONTACT -->
+
+        <a href="#" class="section-close">X</a>
+        <section class="home contact">
+
+            <div class="section-title">Contact</div>
+
+            <div class="section-container">
+
+            </div>
+
+        </section>
+    </main>
+
+    
+    
+    
+    
+    
+    
+    
+    <script src="js/jquery-3.1.1.js"></script>
+
+    <script>
+
+        $(document).ready(function() {
+
+            /**************Quand on clique sur une section*******/
+
+            $("section" ).on("click", showSection);
+
+            $(".section-title").on("click", function () {
+                $("section" ).on("click", showSection);
+            });
+
+            function showSection () {
+
+                //Section prend tout l'écran
+
+                $(this).css({
+                    "z-index" : "50",
+                    "width" : "100%",
+                    "height" : "100%",
+                });
+
+                //On affiche le bouton close
+
+                $(this).prev(".section-close").show();
+                $(this).prev(".section-close").animate({
+//                    "display": "block",
+                    "opacity": "1",
+//                    "z-index": "101"
+                });
+            };
+
+
+
+            /****************** on appui sur le bouton close*********/
+
+            $(".section-close").on("click", hideSection);
+
+            function hideSection() {
+
+                //Remettre la section à 50%
+
+                $(this).next("section").css({
+                    "z-index" : "1",
+                    "width" : "50%",
+                    "height" : "50%",
+                });
+
+                //Faire disparaitre le bouton
+
+                $(this).animate({
+                    "opacity": "0",
+                });
+//                $(this).delay(1000).hide(0);
+            };
+
+
+
+            
+        });
+    </script>
+</body>
+
+</html>

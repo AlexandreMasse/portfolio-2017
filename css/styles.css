@@ -1,0 +1,159 @@
+/**************************** CSS GENERAL****************************************/
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body, main {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ecf0f1;
+}
+
+
+ a {
+     text-decoration: none;
+ }
+
+
+
+ /***************************** KEYFRAMES ************************************/
+
+
+
+@keyframes intro-section {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    40% {
+        width: 0;
+        height: 0;
+    }
+
+    100% {
+        width: 50%;
+        height: 50%;
+    }
+
+}
+
+
+
+@keyframes intro-section-titre {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}
+
+
+
+
+
+
+
+/**************************** SECTIONS **************************************/
+
+
+main .section-close {
+    z-index: 330;
+    display: none;
+    position : absolute;
+    top: 10%;
+    left: 10%;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: #fff;
+    opacity: 0;
+    font-size: 2rem;
+
+    /*transition: all 0.2s ease;*/
+}
+
+main section {
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    z-index: 1;
+    transition: all .3s ease-out;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation: intro-section 2s ease-out;
+
+}
+
+
+
+
+main section.about {
+    top: 0;
+    left: 0;
+
+    background-color: #1abc9c;
+}
+main section.work {
+    top: 0;
+    right: 0;
+    background-color: #3498db;
+}
+main section.skill {
+    bottom: 0;
+    left: 0;
+    background-color: #f39c12;
+}
+main section.contact {
+    bottom: 0;
+    right: 0;
+    background-color: #e74c3c;
+}
+
+
+
+main section .section-title {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    animation: intro-section-titre 4s;
+}
+
+
+main section .section-container {
+    width: 100%;
+    height: 100%;
+    display: none;
+
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+
+}
+
+
+
+
+
+
+
+
