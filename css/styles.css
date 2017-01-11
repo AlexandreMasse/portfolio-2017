@@ -32,8 +32,9 @@ body {
 
  main{
      display: flex;
-     justify-content: center;
+     justify-content: space-around;
      align-items: center;
+     flex-direction: column;
  }
 
 
@@ -69,7 +70,13 @@ body {
 
 
 
-/********************TITRE INTRO ************************/
+/******************** INTRO ************************/
+
+
+.intro-me {
+    font-size: 4.3rem;
+}
+
 
 .intro-title {
     display: flex;
@@ -90,6 +97,9 @@ body {
 }
 
 
+.intro-dev {
+    font-size: 4rem;
+}
 
 
 /**************************** SECTIONS **************************************/
@@ -106,7 +116,7 @@ main .section-close {
     /*height: 50px;*/
 
     color: #fff;
-    opacity: 0;
+    /*opacity: 1;*/
     font-size: 4rem;
 
     /*transition: all 0.2s ease;*/
