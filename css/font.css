@@ -1,0 +1,25 @@
+/*exemple d'import de font*/
+
+/*Todo*/
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('Ubuntu-RI-webfont.eot');
+    src: url('Ubuntu-RI-webfont.eot?#iefix') format('embedded-opentype'),
+    url('Ubuntu-RI-webfont.woff') format('woff'),
+    url('Ubuntu-RI-webfont.ttf') format('truetype'),
+    url('Ubuntu-RI-webfont.svg#UbuntuItalic') format('svg');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('Ubuntu-B-webfont.eot');
+    src: url('Ubuntu-B-webfont.eot?#iefix') format('embedded-opentype'),
+    url('Ubuntu-B-webfont.woff') format('woff'),
+    url('Ubuntu-B-webfont.ttf') format('truetype'),
+    url('Ubuntu-B-webfont.svg#UbuntuBold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
