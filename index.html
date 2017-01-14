@@ -22,7 +22,10 @@
 </head>
 <body>
     <main>
-        
+
+
+        <!-- INTRO -->
+
         <div class="intro-me">Alexandre Massé</div>
 
         <div class="intro-title">
@@ -32,8 +35,7 @@
         
         <div class="intro-dev">Creative developer</div>
 
-
-
+        <!-- Navigation -->
 
         <a href="#" class="section-close"><span class="flaticon-close"></span></a>
 
@@ -44,7 +46,7 @@
             <div class="section-title">A propos de moi</div>
 
             <div class="section-container">
-
+                <p>ceci est le contenu de ma setion projet</p>
             </div>
 
         </section>
@@ -107,17 +109,19 @@
             $(".intro-title").on("click", btnintro);
 
             function btnintro () {
-//                $("section").css({
-//                    "z-index" : "1",
-//                    "width" : "50%",
-//                    "height" : "50%",
-//                });
+                //Afficher les sections
                 $("section").css({
                     "animation" : "intro-section 1s ease-out",
                     "width" : "50%",
-                    "height" : "50%",
+                    "height" : "50%"
                 });
+
+                //Afficher titre des sections
+                setTimeout(function(){
+                    $(".section-title").fadeIn("slow");
+                },1500);
             };
+
 
             /**************Quand on clique sur une section*******/
 
@@ -139,18 +143,27 @@
                     "height" : "100%"
                 });
 
-                //On affiche le bouton close
+                //On cache le titre de la section
+
+                $(".section-title").fadeOut("slow");
+
+
+                //On affiche le contenu de la section
                 setTimeout(function(){
-                    $(".section-close").fadeIn();
+                    $(".section-container").fadeIn("slow");
+                    $(".section-container").css({
+                        "display" : "flex",
+                        "align-items" : "center",
+                        "justify-content": "center"
+                    })
                 },1000);
 
-                /*
-                $(this).prev(".section-close").fa();
-                $(this).prev(".section-close").animate({
-//                    "display": "block",
-                    "opacity": "1",
-//                    "z-index": "101"
-                });*/
+
+                //On affiche le bouton close
+                setTimeout(function(){
+                    $(".section-close").fadeIn("slow");
+                },1500);
+
             };
 
 
@@ -161,7 +174,7 @@
 
             function hideSection() {
 
-                //Remettre la section à 50%
+                //Remettre les sections à 50%
 
                 /*$(this).next("section").css({
                     "z-index" : "1",
@@ -175,12 +188,20 @@
                     "height" : "50%",
                 });
 
-                //Faire disparaitre le bouton
+                //Afficher les titres des sections
+                setTimeout(function () {
+                    $(".section-title").fadeIn(800);
+                },700);
 
+                //Cacher le contenu de la section
+                $(".section-container").fadeOut();
+
+
+                //Faire disparaitre le bouton close
                 $(".section-close").fadeOut();
 
-
 /*
+
                 $(this).animate({
                     "opacity": "0",
                 });*/
