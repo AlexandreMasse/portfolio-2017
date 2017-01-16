@@ -21,7 +21,9 @@ html, body, main {
 
 
 body {
-    background-color: #ecf0f1;
+    background-color: #00B5B5;
+    /*background-color: rgb(37, 116, 169);*/
+    /*background-color: #ecf0f1;*/
 }
 
 
@@ -32,13 +34,15 @@ body {
 
  main{
      display: flex;
-     justify-content: space-around;
+     justify-content: center;
      align-items: center;
      flex-direction: column;
  }
 
 
- /***************************** KEYFRAMES ************************************/
+ /***********************************
+ KEYFRAMES
+ ************************************/
 
 /*Intro des sections*/
 
@@ -68,44 +72,12 @@ body {
 }
 
 
+/***************************************
+NAVIGATION
+*****************************************/
 
 
-/******************** INTRO ************************/
-
-
-.intro-me {
-    font-size: 4.3rem;
-}
-
-
-.intro-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    z-index: 0;
-
-    width:300px;
-    height:300px;
-    border-radius: 50%;
-
-    font-size: 2.5rem;
-    cursor: pointer;
-    background-color: #2da9ff;
-    color: white;
-
-}
-
-
-.intro-dev {
-    font-size: 4rem;
-}
-
-
-/**************************** SECTIONS **************************************/
-
-
-main .section-close {
+.section-close {
     z-index: 200;
     display: none;
     position : absolute;
@@ -118,9 +90,255 @@ main .section-close {
     color: #fff;
     /*opacity: 1;*/
     font-size: 4rem;
+    animation: bouton-close 2s;
 
-    /*transition: all 0.2s ease;*/
+    transition: transform 1s ease;
 }
+
+
+@keyframes bouton-close {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(270deg);
+    }
+}
+
+
+.nav-home {
+    display: none;
+    position : absolute;
+    top: 7%;
+    left: 7%;
+    height: 3rem;
+    width:3rem;
+    z-index: 200;
+
+    font-size: 4rem;
+    background-color: #fff;
+    color: white;
+}
+
+
+
+/****************************************
+INTRO
+*****************************************/
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.intro-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:auto;
+
+    font-size: 4.8rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    /*font-family: "Mosk Bold 700";*/
+    color: white;
+
+    text-transform: uppercase;
+
+
+    margin-bottom: 3rem;
+}
+
+.intro-me p {
+    opacity: 0;
+    margin: 0;
+    animation: intro-me-p 1.5s ease 1s forwards;
+}
+
+/*Todo*/
+
+@keyframes intro-me-p {
+    0% {
+        transform: translateY(60%);
+
+    }
+    20% {
+        opacity: 0;
+        /*transform: translateX(-60%);*/
+    }
+    90% {
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+.intro-me hr {
+    opacity: 0;
+    width: 110%;
+
+    margin: 1.2rem;
+    border-bottom: solid 2px white;
+
+    animation: intro-me-hr 1s ease .6s forwards;
+}
+
+
+@keyframes intro-me-hr {
+    0% {
+        opacity: 0;
+        width: 0;
+    }
+    100% {
+        opacity: 1;
+        width: 110%;
+    }
+}
+
+
+
+.intro-dev {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:auto;
+
+    font-size: 4.3rem;
+    color: white;
+    margin-top: 3rem;
+}
+
+.intro-dev p {
+    font-size: 3.5rem;
+    /*font-family: 'Lato', sans-serif;
+    font-weight: 300;*/
+    font-family: "Mosk Light 300";
+    text-transform: uppercase;
+
+    opacity: 0;
+    margin: 0;
+    animation: intro-dev 1.5s ease 2.3s forwards;
+}
+
+
+@keyframes intro-dev {
+    0% {
+        transform: translateY(-60%);
+
+    }
+    20% {
+        opacity: 0;
+        /*transform: translateX(-60%);*/
+    }
+    90% {
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.intro-dev hr {
+    opacity: 0;
+    width: 110%;
+    margin: 0.8rem;
+    color: white;
+    border-bottom: solid 2px white;
+
+    animation: intro-dev-hr 1s ease 1.8s forwards;
+}
+
+
+@keyframes intro-dev-hr {
+    0% {
+        opacity: 0;
+        width: 0;
+    }
+    100% {
+        opacity: 1;
+        width: 110%;
+    }
+}
+
+
+
+.intro-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width:30rem;
+    height:10rem;
+
+    margin: 1rem 0;
+    z-index: 0;
+    opacity: 0;
+
+    cursor: pointer;
+    border: 2px solid white;
+
+    color: white;
+    font-family: 'Mosk Bold 700';
+    /*font-weight: 700;*/
+    font-size: 2.5rem;
+    /*background-color: red;*/
+
+    transition: all .7s ease;
+    animation: intro-title 2.5s ease 3.2s forwards;
+}
+
+
+@keyframes intro-title {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.intro-title:hover {
+
+    background-color: white;
+    color: #00B5B5;
+    /*color: rgb(37, 116, 169);*/
+
+    transition: all .7s ease;
+}
+
+
+@media screen and (max-width: 300px) {
+
+}
+
+
+
+/*********************************************
+*SECTIONS
+**********************************************/
+
+
+
+
+
+
+
+
+
+main .section-close:hover {
+    transform: rotate(180deg);
+
+    transition: transform 1s ease;
+}
+
 
 main section {
     height: 0;
@@ -130,12 +348,12 @@ main section {
     transition: all .7s ease-out;
     overflow: hidden;
 
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
 
     /*animation: intro-section 2s ease-out;*/
-
 }
 
 
@@ -164,7 +382,6 @@ main section.contact {
 }
 
 
-
 main section .section-title {
     display: none;
     text-align: center;
@@ -172,6 +389,15 @@ main section .section-title {
     color: white;
     cursor: pointer;
     /*animation: intro-section-titre 4s;*/
+
+    transition: transform .3s ease-out;
+}
+
+
+main section:hover .section-title {
+    transform: scale(1.06);
+
+    transition: transform 0.3s ease-out;
 }
 
 
@@ -179,12 +405,22 @@ main section .section-container {
     display: none;
     width: 100%;
     height: 100%;
-
+    padding-top: 2rem;
+    color: white;
+    font-size: 2rem;
     /*display: flex;*/
     /*align-items: center;*/
     /*justify-content: center;*/
 
 }
+
+
+
+
+
+
+
+
 
 
 

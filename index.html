@@ -15,6 +15,10 @@
 
     <!-- Font text -->
 
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="font/font.css">
+
     <!-- Styles perso -->
     <link rel="stylesheet" href="css/styles.css">
 
@@ -25,17 +29,28 @@
 
 
         <!-- INTRO -->
+        <div class="intro">
 
-        <div class="intro-me">Alexandre Massé</div>
+            <div class="intro-me">
+                <p>Alexandre Massé</p>
+                <hr>
+            </div>
 
-        <div class="intro-title">
-            <p>MON</p>
-            <p>PORTFOLIO</p>
+            <div class="intro-title">
+                <p>Découvrez moi</p>
+            </div>
+
+
+            <div class="intro-dev">
+                <hr>
+                <p>Creative developer</p>
+            </div>
+
         </div>
-        
-        <div class="intro-dev">Creative developer</div>
 
         <!-- Navigation -->
+
+        <a href="#" class="nav-home"><span class="flaticon-close"></span></a>
 
         <a href="#" class="section-close"><span class="flaticon-close"></span></a>
 
@@ -46,6 +61,7 @@
             <div class="section-title">A propos de moi</div>
 
             <div class="section-container">
+
                 <p>ceci est le contenu de ma setion projet</p>
             </div>
 
@@ -104,11 +120,25 @@
     'use strict';
         $(document).ready(function() {
 
-            /**************Quand on clique sur intro *************/
+
+            /**************************
+             * Au chargement de la page
+             * ************************/
+
+
+
+            /*******************
+             * Clique sur intro
+             * *****************/
 
             $(".intro-title").on("click", btnintro);
 
             function btnintro () {
+
+                //Caher l'intro
+                $(".intro").fadeOut("slow");
+
+
                 //Afficher les sections
                 $("section").css({
                     "animation" : "intro-section 1s ease-out",
@@ -118,12 +148,34 @@
 
                 //Afficher titre des sections
                 setTimeout(function(){
-                    $(".section-title").fadeIn("slow");
-                },1500);
+                    $(".about .section-title").fadeIn("slow");
+                },1000);
+
+                setTimeout(function(){
+                    $(".work .section-title").fadeIn("slow");
+                },1100);
+                setTimeout(function(){
+                    $(".contact .section-title").fadeIn("slow");
+                },1200);
+                setTimeout(function(){
+                    $(".skill .section-title").fadeIn("slow");
+                },1300);
+
+
+                //Afficher le bouton home
+                setTimeout(function(){
+                    $(".nav-home").fadeIn("slow");
+                },1700);
+
+
             };
 
 
-            /**************Quand on clique sur une section*******/
+
+
+            /************************
+             * Clique sur une section
+             * ***********************/
 
 
             $("section").on("click", showSection);
@@ -136,39 +188,42 @@
             function showSection () {
 
                 //Section prend tout l'écran
-
                 $(this).css({
                     "z-index" : "100",
                     "width" : "100%",
                     "height" : "100%"
                 });
 
-                //On cache le titre de la section
-
+                //Cacher le titre de la section
                 $(".section-title").fadeOut("slow");
 
+                //Cacher le bouton home
+                $('.nav-home').fadeOut();
 
-                //On affiche le contenu de la section
+
+                //Afficher le contenu de la section
                 setTimeout(function(){
                     $(".section-container").fadeIn("slow");
                     $(".section-container").css({
                         "display" : "flex",
-                        "align-items" : "center",
-                        "justify-content": "center"
+                        "justify-content": "center",
+//                        "align-items" : "center"
                     })
-                },1000);
+                },700);
 
 
                 //On affiche le bouton close
                 setTimeout(function(){
                     $(".section-close").fadeIn("slow");
-                },1500);
+                },1200);
 
             };
 
 
 
-            /****************** on appui sur le bouton close*********/
+            /******************************
+             * Click sur le bouton close
+             * *****************************/
 
             $(".section-close").on("click", hideSection);
 
@@ -200,11 +255,18 @@
                 //Faire disparaitre le bouton close
                 $(".section-close").fadeOut();
 
-/*
+                //Faire apparaitre le bouton home
+                setTimeout(function () {
+                    $('.nav-home').fadeIn("slow");
 
-                $(this).animate({
-                    "opacity": "0",
-                });*/
+                },1400);
+
+
+                /*
+
+                                $(this).animate({
+                                    "opacity": "0",
+                                });*/
 //                $(this).delay(1000).hide(0);
             };
 
