@@ -8,7 +8,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 
-
     <meta name="theme-color" content="#00B5B5">
 
     <!-- Normalize -->
@@ -42,7 +41,7 @@
 
 
             <div class="intro-title">
-                <p>Me découvrir</p>
+                <p>Découvre moi</p>
             </div>
 
 
@@ -53,12 +52,14 @@
 
         </div>
 
-        <!-- Navigation -->
+
+        <!-- NaAVIGATION -->
 
         <a href="#" class="nav-home"><span class="flaticon-home-01"></span></a>
 
-        <a href="#" class="section-close"><span class="flaticon-cross-01"></span></a>
+        <a href="#" class="section-close"><span class="flaticon-cross-03"></span></a>
 
+        <!-- Todo-->
 
         <!-- SECTION : ABOUT -->
 
@@ -68,7 +69,42 @@
 
             <div class="section-container">
 
-                <p>ceci est le contenu de ma setion projet</p>
+                <picture class="photo-me">
+                    <source media="(min-width: 600px)" srcset="img/me-l.jpg">
+                    <source media="(min-width: 400px)" srcset="img/me-m.jpg">
+                    <img src="img/me-s.jpg" alt="">
+                </picture>
+
+                <h1>Alexandre Massé</h1>
+                <h2>Developpeur</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum labore nulla ut. Ad animi aut consequatur eius eos est neque perferendis perspiciatis qui quod recusandae repudiandae sequi ullam voluptate, voluptates.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias consequatur culpa delectus, dolorem ea earum, ex illo ipsum maxime minima natus nihil numquam omnis porro, quia ut. Fuga, totam.</p>
+
+
+
+                <h2>Rejoins moi sur mes différents réseaux sociaux !</h2>
+
+                <div class="social">
+                    <a href="#" title="aide">
+                        <span class="flaticon-social-github"></span>
+                    </a>
+
+                    <a href="#">
+                        <span class="flaticon-social-twitter-01"></span>
+                    </a>
+
+                    <a href="#">
+                        <span class="flaticon-social-flickr"></span>
+                    </a>
+
+                    <a href="#">
+                        <span class="flaticon-social-linkedin"></span>
+                    </a>
+
+
+                </div>
+
             </div>
 
         </section>
@@ -79,7 +115,7 @@
 
         <section class="cat work">
 
-            <div class="section-title">Mes projects</div>
+            <div class="section-title">Mes projets</div>
 
             <div class="section-container">
 
@@ -245,6 +281,7 @@
     </main>
 
 
+
     
     <!-- JQuery -->
     <script src="js/jquery-3.1.1.min.js"></script>
@@ -256,16 +293,15 @@
     'use strict';
         $(document).ready(function() {
 
-            /**************************
+            /********************************
              * Au chargement de la page
-             * ************************/
+             * ******************************/
 
             var body = $('body');
 
-
-            /*******************
+            /**********************************
              * Clique sur intro
-             * *****************/
+             * ********************************/
 
             $(".intro-title").on("click", btnintro);
 
@@ -276,7 +312,6 @@
 
                 //Caher l'intro
                 $(".intro").fadeOut("slow");
-
 
                 //Afficher les sections
                 $(".cat").css({
@@ -292,27 +327,27 @@
 
                 setTimeout(function(){
                     $(".work .section-title").fadeIn("slow");
-                },1100);
-                setTimeout(function(){
-                    $(".contact .section-title").fadeIn("slow");
                 },1200);
                 setTimeout(function(){
+                    $(".contact .section-title").fadeIn("slow");
+                },1400);
+                setTimeout(function(){
                     $(".skill .section-title").fadeIn("slow");
-                },1300);
+                },1600);
 
 
                 //Afficher le bouton home
                 setTimeout(function(){
-                    $(".nav-home").fadeIn("slow");
-                },1700);
+                    $(".nav-home").fadeIn(700);
+                },1800);
 
             };
 
 
 
-            /************************
+            /**********************************
              * Clique sur une section
-             * ***********************/
+             * *********************************/
 
 
             $(".cat").on("click", showSection);
@@ -342,7 +377,7 @@
                 //Ne plus centrer verticalement
                 setTimeout(function(){
                     section.css({
-                    "align-items" : "flex-start",
+                        "align-items" : "flex-start",
                     })
                 },800);
 
@@ -354,15 +389,22 @@
 
 
                 //Afficher le contenu de la section
-                setTimeout(function(){
 
-                    section.find(".section-container").fadeIn("slow");
+                setTimeout(function () {
+                    section.find(".section-container").fadeIn(1);
                     section.find(".section-container").css({
                         "display" : "flex",
-                        "justify-content": "center",
-//                        "align-items" : "center"
-                    })
-                },700);
+                        /*"justify-content": "center",
+                        "align-items" : "center"*/
+                    });
+
+                }, 800);
+
+                setTimeout(function(){
+
+                    section.find(".section-container").animate({"opacity": "1"}, 700);
+                },900);
+
 
 
                 //On affiche le bouton close
@@ -384,28 +426,39 @@
                 $("meta[name='theme-color']").attr("content", "");
 
 
-                //Cacher le contenu de la section
-                $(".section-container").fadeOut(1);
+
+                //Mettre opacité 0
+                $(".section-container").animate({"opacity": "0"}, 300);
+
+                //Cacher le contenu de la section après opacité 0
+                setTimeout(function () {
+                    $(".section-container").fadeOut(1);
+                }, 680);
 
                 /*Todo*/
 
                 //Remettre les sections à 50% et aligner verticalement
-                $("section").css({
-                    "z-index" : "1",
-                    "width" : "50%",
-                    "height" : "50%",
-                    "align-items" : "center",
-                });
+
+                setTimeout(function () {
+
+                    $("section").css({
+                        "z-index" : "1",
+                        "width" : "50%",
+                        "height" : "50%",
+                        "align-items" : "center",
+                    });
+                }, 300);
 
                 //Afficher les titres des sections
                 setTimeout(function () {
                     $(".section-title").fadeIn(800);
-                },700);
-
+                },800);
 
 
                 //Faire disparaitre le bouton close
-                $(".section-close").fadeOut();
+                setTimeout(function () {
+                    $(".section-close").fadeOut();
+                }, 100);
 
                 //Faire apparaitre le bouton home
                 setTimeout(function () {

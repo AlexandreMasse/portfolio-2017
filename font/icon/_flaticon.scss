@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 17/01/2017 03:58
+    Creation date: 17/01/2017 20:21
     */
 
     @font-face {
@@ -36,20 +36,36 @@
   font-smoothing: antialiased;
     }
 
-    .flaticon-cross-01:before { content: "\f100"; }
-.flaticon-cross-02:before { content: "\f101"; }
-.flaticon-cross-03:before { content: "\f102"; }
-.flaticon-home-01:before { content: "\f103"; }
-.flaticon-home-02:before { content: "\f104"; }
-.flaticon-home-03:before { content: "\f105"; }
-.flaticon-home-04:before { content: "\f106"; }
-.flaticon-home-05:before { content: "\f107"; }
+    .flaticon-about:before { content: "\f100"; }
+.flaticon-cross-01:before { content: "\f101"; }
+.flaticon-cross-02:before { content: "\f102"; }
+.flaticon-cross-03:before { content: "\f103"; }
+.flaticon-home-01:before { content: "\f104"; }
+.flaticon-home-02:before { content: "\f105"; }
+.flaticon-home-03:before { content: "\f106"; }
+.flaticon-home-04:before { content: "\f107"; }
+.flaticon-home-05:before { content: "\f108"; }
+.flaticon-skill:before { content: "\f109"; }
+.flaticon-social-flickr:before { content: "\f10a"; }
+.flaticon-social-github:before { content: "\f10b"; }
+.flaticon-social-linkedin:before { content: "\f10c"; }
+.flaticon-social-twitter-01:before { content: "\f10d"; }
+.flaticon-social-twitter-02:before { content: "\f10e"; }
+.flaticon-work:before { content: "\f10f"; }
     
-    $font-Flaticon-cross-01: "\f100";
-    $font-Flaticon-cross-02: "\f101";
-    $font-Flaticon-cross-03: "\f102";
-    $font-Flaticon-home-01: "\f103";
-    $font-Flaticon-home-02: "\f104";
-    $font-Flaticon-home-03: "\f105";
-    $font-Flaticon-home-04: "\f106";
-    $font-Flaticon-home-05: "\f107";
+    $font-Flaticon-about: "\f100";
+    $font-Flaticon-cross-01: "\f101";
+    $font-Flaticon-cross-02: "\f102";
+    $font-Flaticon-cross-03: "\f103";
+    $font-Flaticon-home-01: "\f104";
+    $font-Flaticon-home-02: "\f105";
+    $font-Flaticon-home-03: "\f106";
+    $font-Flaticon-home-04: "\f107";
+    $font-Flaticon-home-05: "\f108";
+    $font-Flaticon-skill: "\f109";
+    $font-Flaticon-social-flickr: "\f10a";
+    $font-Flaticon-social-github: "\f10b";
+    $font-Flaticon-social-linkedin: "\f10c";
+    $font-Flaticon-social-twitter-01: "\f10d";
+    $font-Flaticon-social-twitter-02: "\f10e";
+    $font-Flaticon-work: "\f10f";

@@ -1,5 +1,4 @@
 
-
 @font-face {
   font-family: "Flaticon";
   src: url("./Flaticon.eot");
@@ -21,16 +20,25 @@
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
   font-family: Flaticon;
-        font-size: 20px;
+        /*font-size: 20px;*/
 font-style: normal;
 /*margin-left: 20px;*/
 }
 
-.flaticon-cross-01:before { content: "\f100"; }
-.flaticon-cross-02:before { content: "\f101"; }
-.flaticon-cross-03:before { content: "\f102"; }
-.flaticon-home-01:before { content: "\f103"; }
-.flaticon-home-02:before { content: "\f104"; }
-.flaticon-home-03:before { content: "\f105"; }
-.flaticon-home-04:before { content: "\f106"; }
-.flaticon-home-05:before { content: "\f107"; }
+
+.flaticon-about:before { content: "\f100"; }
+.flaticon-cross-01:before { content: "\f101"; }
+.flaticon-cross-02:before { content: "\f102"; }
+.flaticon-cross-03:before { content: "\f103"; }
+.flaticon-home-01:before { content: "\f104"; }
+.flaticon-home-02:before { content: "\f105"; }
+.flaticon-home-03:before { content: "\f106"; }
+.flaticon-home-04:before { content: "\f107"; }
+.flaticon-home-05:before { content: "\f108"; }
+.flaticon-skill:before { content: "\f109"; }
+.flaticon-social-flickr:before { content: "\f10a"; }
+.flaticon-social-github:before { content: "\f10b"; }
+.flaticon-social-linkedin:before { content: "\f10c"; }
+.flaticon-social-twitter-01:before { content: "\f10d"; }
+.flaticon-social-twitter-02:before { content: "\f10e"; }
+.flaticon-work:before { content: "\f10f"; }
