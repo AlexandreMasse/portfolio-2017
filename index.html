@@ -14,21 +14,21 @@
     <link rel="stylesheet" href="font/icon/flaticon.css">
 
     <!-- Font text -->
-
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900" rel="stylesheet">
-
     <link rel="stylesheet" href="font/font.css">
 
     <!-- Styles perso -->
     <link rel="stylesheet" href="css/styles.css">
 
+
     <title>Portfolio - Alexandre Massé</title>
 </head>
 <body>
+
     <main>
 
-
         <!-- INTRO -->
+
         <div class="intro">
 
             <div class="intro-me">
@@ -36,8 +36,9 @@
                 <hr>
             </div>
 
+
             <div class="intro-title">
-                <p>Découvrez moi</p>
+                <p>Me découvrir</p>
             </div>
 
 
@@ -50,13 +51,14 @@
 
         <!-- Navigation -->
 
-        <a href="#" class="nav-home"><span class="flaticon-close"></span></a>
+        <a href="#" class="nav-home"><span class="flaticon-home-01"></span></a>
 
-        <a href="#" class="section-close"><span class="flaticon-close"></span></a>
+        <a href="#" class="section-close"><span class="flaticon-cross-01"></span></a>
+
 
         <!-- SECTION : ABOUT -->
 
-        <section class="home about">
+        <section class="cat about">
 
             <div class="section-title">A propos de moi</div>
 
@@ -68,21 +70,91 @@
         </section>
 
 
+
         <!-- SECTION : WORK -->
 
-        <section class="home work">
+        <section class="cat work">
 
             <div class="section-title">Mes projects</div>
 
             <div class="section-container">
 
+                <h1>Mes Projets</h1>
+
+                <div class="work-img" data-pos="1">
+
+                    <div class="work-item">
+                        <figure>
+                            <img src="http://erwann-letue.fr/img/projects/cvInteractif.png" alt="">
+                        </figure>
+                        <span>Hover</span>
+                    </div>
+
+                    <div class="work-item">
+                        <figure>
+                            <img src="http://placehold.it/800x800" alt="">
+                        </figure>
+                        <span>Hover</span>
+                    </div>
+
+
+
+                    <div class="work-item">
+                        <figure>
+                            <img src="http://placehold.it/800x800" alt="">
+                        </figure>
+                        <span>Hover</span>
+                    </div>
+
+
+
+                    <div class="work-item">
+                        <figure>
+                            <img src="http://placehold.it/800x800" alt="">
+                        </figure>
+                        <span>Hover</span>
+                    </div>
+
+                    <div class="work-item">
+                        <figure>
+                            <img src="http://placehold.it/800x800" alt="">
+                        </figure>
+                        <span>Hover</span>
+                    </div>
+
+                    <div class="work-item">
+                        <figure>
+                            <img src="http://placehold.it/800x800" alt="">
+                        </figure>
+                        <span>Hover</span>
+                    </div>
+
+                </div>
+
+
+                <div class="workview">
+
+                    <div>
+                        <p>ceci est mon travail</p>
+
+                        <a href="#" class="nav-work-close"><span class="flaticon-cross-02"></span></a>
+                    </div>
+                </div>
+
+
             </div>
+
         </section>
+
+
+
+
+
 
 
         <!-- SECTION : SKILL -->
 
-        <section class="home skill">
+        <section class="cat skill">
 
             <div class="section-title">Mes compétences</div>
 
@@ -96,7 +168,7 @@
 
         <!-- SECTION : CONTACT -->
 
-        <section class="home contact">
+        <section class="cat contact">
 
             <div class="section-title">Contact</div>
 
@@ -112,19 +184,18 @@
     <!-- JQuery -->
     <script src="js/jquery-3.1.1.min.js"></script>
 
-    <!-- Plugin JQuery -->
 
-    <script src="js/jquery.transit.min.js"></script>
+    <!-- Javascript perso -->
 
     <script>
     'use strict';
         $(document).ready(function() {
 
-
             /**************************
              * Au chargement de la page
              * ************************/
 
+            var body = $('body');
 
 
             /*******************
@@ -140,8 +211,8 @@
 
 
                 //Afficher les sections
-                $("section").css({
-                    "animation" : "intro-section 1s ease-out",
+                $(".cat").css({
+                    "animation" : "section-in 1s ease-out",
                     "width" : "50%",
                     "height" : "50%"
                 });
@@ -167,9 +238,7 @@
                     $(".nav-home").fadeIn("slow");
                 },1700);
 
-
             };
-
 
 
 
@@ -178,21 +247,31 @@
              * ***********************/
 
 
-            $("section").on("click", showSection);
+            $(".cat").on("click", showSection);
+/*
 
             $(".section-title").on("click", function () {
-                $("section" ).on("click", showSection);
+                $(this).parent(".cat" ).on("click", showSection);
             });
+*/
 
 
             function showSection () {
+                var section = $(this);
 
                 //Section prend tout l'écran
                 $(this).css({
                     "z-index" : "100",
                     "width" : "100%",
-                    "height" : "100%"
+                    "height" : "100%",
                 });
+
+                //Ne plus centrer verticallement
+                setTimeout(function(){
+                    section.css({
+                    "align-items" : "flex-start",
+                    })
+                },800);
 
                 //Cacher le titre de la section
                 $(".section-title").fadeOut("slow");
@@ -203,8 +282,9 @@
 
                 //Afficher le contenu de la section
                 setTimeout(function(){
-                    $(".section-container").fadeIn("slow");
-                    $(".section-container").css({
+
+                    section.find(".section-container").fadeIn("slow");
+                    section.find(".section-container").css({
                         "display" : "flex",
                         "justify-content": "center",
 //                        "align-items" : "center"
@@ -216,9 +296,7 @@
                 setTimeout(function(){
                     $(".section-close").fadeIn("slow");
                 },1200);
-
             };
-
 
 
             /******************************
@@ -229,18 +307,17 @@
 
             function hideSection() {
 
-                //Remettre les sections à 50%
+                //Cacher le contenu de la section
+                $(".section-container").fadeOut(1);
 
-                /*$(this).next("section").css({
-                    "z-index" : "1",
-                    "width" : "50%",
-                    "height" : "50%",
-                });*/
+                /*Todo*/
 
+                //Remettre les sections à 50% et aligner verticalement
                 $("section").css({
                     "z-index" : "1",
                     "width" : "50%",
                     "height" : "50%",
+                    "align-items" : "center",
                 });
 
                 //Afficher les titres des sections
@@ -248,8 +325,6 @@
                     $(".section-title").fadeIn(800);
                 },700);
 
-                //Cacher le contenu de la section
-                $(".section-container").fadeOut();
 
 
                 //Faire disparaitre le bouton close
@@ -261,20 +336,75 @@
 
                 },1400);
 
-
-                /*
-
-                                $(this).animate({
-                                    "opacity": "0",
-                                });*/
-//                $(this).delay(1000).hide(0);
             };
 
+            /******************************
+             * Click sur le bouton home
+             * *****************************/
 
-
+            $(".nav-home").on("click", home);
             
+            function home() {
+
+                $(".nav-home").fadeOut(1);
+
+                //Cacher les sections
+                $(".cat").css({
+                    "animation" : "section-out 1s ease-out",
+                    "width" : "0",
+                    "height" : "0"
+                });
+
+
+                $(".section-title").fadeOut("slow");
+
+
+                //Afficher l'intro
+                $(".intro").fadeIn("slow");
+            }
+
+
+            /********************************
+             *Click sur un projet
+             ********************************/
+
+            $(".work-img .work-item").on("click", showWork);
+
+            function showWork() {
+                //on recupère la position de l'élément
+                var position = $(".work-img").index(this);
+
+
+//                body.css('overflow', 'hidden');
+                $(".workview div").eq(position).css({
+                    "display": "block"
+                }).animate({"bottom": 0}, 500, function() {
+                    /*body.css('overflow', 'auto');*/
+                });
+            }
+
+            /***********************************
+             *Click bouton close work
+             ************************************/
+
+            $('.nav-work-close').on("click", hideWork);
+
+            function hideWork() {
+//                body.css('overflow', 'hidden');
+
+                $(this).parent().animate({"bottom": "-100vh"}, 500, function() {
+
+                    $(this).css('display', 'none');
+//                    body.css('overflow', 'auto');
+                })
+            }
+
+
+
+
         });
     </script>
+
 </body>
 
 </html>

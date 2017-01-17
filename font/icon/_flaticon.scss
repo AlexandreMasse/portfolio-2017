@@ -1,15 +1,15 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 10/01/2017 18:29
+    Creation date: 17/01/2017 03:58
     */
 
     @font-face {
   font-family: "Flaticon";
-  src: url("Flaticon.eot");
-  src: url("Flaticon.eot?#iefix") format("embedded-opentype"),
-       url("Flaticon.woff") format("woff"),
-       url("Flaticon.ttf") format("truetype"),
-       url("Flaticon.svglaticon") format("svg");
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -17,7 +17,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "Flaticon";
-    src: url("Flaticon.svglaticon") format("svg");
+    src: url("./Flaticon.svg#Flaticon") format("svg");
   }
 }
 
@@ -36,6 +36,20 @@
   font-smoothing: antialiased;
     }
 
-    .flaticon-close:before { content: "\f100"; }
+    .flaticon-cross-01:before { content: "\f100"; }
+.flaticon-cross-02:before { content: "\f101"; }
+.flaticon-cross-03:before { content: "\f102"; }
+.flaticon-home-01:before { content: "\f103"; }
+.flaticon-home-02:before { content: "\f104"; }
+.flaticon-home-03:before { content: "\f105"; }
+.flaticon-home-04:before { content: "\f106"; }
+.flaticon-home-05:before { content: "\f107"; }
     
-    $font-Flaticon-close: "\f100";
+    $font-Flaticon-cross-01: "\f100";
+    $font-Flaticon-cross-02: "\f101";
+    $font-Flaticon-cross-03: "\f102";
+    $font-Flaticon-home-01: "\f103";
+    $font-Flaticon-home-02: "\f104";
+    $font-Flaticon-home-03: "\f105";
+    $font-Flaticon-home-04: "\f106";
+    $font-Flaticon-home-05: "\f107";
