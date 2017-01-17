@@ -7,6 +7,10 @@
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+
+
+    <meta name="theme-color" content="#00B5B5">
+
     <!-- Normalize -->
     <link rel="stylesheet" href="css/normalize.css">
 
@@ -81,64 +85,125 @@
 
                 <h1>Mes Projets</h1>
 
-                <div class="work-img" data-pos="1">
+                <div class="work-img">
 
                     <div class="work-item">
-                        <figure>
-                            <img src="http://erwann-letue.fr/img/projects/cvInteractif.png" alt="">
+                        <figure class="work-img-hover">
+                            <img src="http://placehold.it/300x200" alt="sample57" />
+                            <figcaption>
+                                <h3>Benjamin Evalent</h3>
+                                <h5>Design</h5>
+                            </figcaption>
+                            <a href="#" data-position="0"></a>
                         </figure>
-                        <span>Hover</span>
                     </div>
 
                     <div class="work-item">
-                        <figure>
-                            <img src="http://placehold.it/800x800" alt="">
+                        <figure class="work-img-hover">
+                            <img src="http://placehold.it/300x200" alt="sample57" />
+                            <figcaption>
+                                <h3>Benjamin Evalent</h3>
+                                <h5>Design</h5>
+                            </figcaption>
+                            <a href="#" data-position="1"></a>
                         </figure>
-                        <span>Hover</span>
-                    </div>
-
-
-
-                    <div class="work-item">
-                        <figure>
-                            <img src="http://placehold.it/800x800" alt="">
-                        </figure>
-                        <span>Hover</span>
-                    </div>
-
-
-
-                    <div class="work-item">
-                        <figure>
-                            <img src="http://placehold.it/800x800" alt="">
-                        </figure>
-                        <span>Hover</span>
                     </div>
 
                     <div class="work-item">
-                        <figure>
-                            <img src="http://placehold.it/800x800" alt="">
+                        <figure class="work-img-hover">
+                            <img src="http://placehold.it/300x200" alt="sample57" />
+                            <figcaption>
+                                <h3>Benjamin Evalent</h3>
+                                <h5>Design</h5>
+                            </figcaption>
+                            <a href="#"data-position="2"></a>
                         </figure>
-                        <span>Hover</span>
+                    </div>
+
+
+                    <div class="work-item">
+                        <figure class="work-img-hover">
+                            <img src="http://placehold.it/300x200" alt="sample57" />
+                            <figcaption>
+                                <h3>Benjamin Evalent</h3>
+                                <h5>Design</h5>
+                            </figcaption>
+                            <a href="#" data-position="3"></a>
+                        </figure>
                     </div>
 
                     <div class="work-item">
-                        <figure>
-                            <img src="http://placehold.it/800x800" alt="">
+                        <figure class="work-img-hover">
+                            <img src="http://placehold.it/300x200" alt="sample57" />
+                            <figcaption>
+                                <h3>Benjamin Evalent</h3>
+                                <h5>Design</h5>
+                            </figcaption>
+                            <a href="#" data-position="4"></a>
                         </figure>
-                        <span>Hover</span>
                     </div>
+
+                    <div class="work-item">
+                        <figure class="work-img-hover">
+                            <img src="http://placehold.it/300x200" alt="sample57" />
+                            <figcaption>
+                                <h3>Benjamin Evalent</h3>
+                                <h5>Design</h5>
+                            </figcaption>
+                            <a href="#" data-position="5"></a>
+                        </figure>
+                    </div>
+
 
                 </div>
+
+
+
+                <!--Todo-->
 
 
                 <div class="workview">
 
                     <div>
-                        <p>ceci est mon travail</p>
+                        <p>ceci est mon travail 1</p>
 
                         <a href="#" class="nav-work-close"><span class="flaticon-cross-02"></span></a>
                     </div>
+
+                    <div>
+                        <p>ceci est mon travail 2</p>
+
+                        <a href="#" class="nav-work-close"><span class="flaticon-cross-02"></span></a>
+                    </div>
+
+
+                    <div>
+                        <p>ceci est mon travail 3</p>
+
+                        <a href="#" class="nav-work-close"><span class="flaticon-cross-02"></span></a>
+                    </div>
+
+                    <div>
+                        <p>ceci est mon travail 4</p>
+
+                        <a href="#" class="nav-work-close"><span class="flaticon-cross-02"></span></a>
+                    </div>
+
+                    <div>
+                        <p>ceci est mon travail 5</p>
+
+                        <a href="#" class="nav-work-close"><span class="flaticon-cross-02"></span></a>
+                    </div>
+
+                    <div>
+                        <p>ceci est mon travail 6</p>
+
+                        <a href="#" class="nav-work-close"><span class="flaticon-cross-02"></span></a>
+                    </div>
+
+
+
+
                 </div>
 
 
@@ -206,6 +271,9 @@
 
             function btnintro () {
 
+                //Changer couleur barre navigateur mobile
+                $("meta[name='theme-color']").attr("content", "");
+
                 //Caher l'intro
                 $(".intro").fadeOut("slow");
 
@@ -248,16 +316,21 @@
 
 
             $(".cat").on("click", showSection);
+
+
 /*
 
             $(".section-title").on("click", function () {
                 $(this).parent(".cat" ).on("click", showSection);
             });
 */
-
-
             function showSection () {
                 var section = $(this);
+
+
+                //Changer couleur barre navigateur mobile
+                var color = section.css("background-color");
+                $("meta[name='theme-color']").attr("content", color);
 
                 //Section prend tout l'écran
                 $(this).css({
@@ -266,7 +339,7 @@
                     "height" : "100%",
                 });
 
-                //Ne plus centrer verticallement
+                //Ne plus centrer verticalement
                 setTimeout(function(){
                     section.css({
                     "align-items" : "flex-start",
@@ -277,7 +350,7 @@
                 $(".section-title").fadeOut("slow");
 
                 //Cacher le bouton home
-                $('.nav-home').fadeOut();
+                $('.nav-home').fadeOut(100);
 
 
                 //Afficher le contenu de la section
@@ -306,6 +379,10 @@
             $(".section-close").on("click", hideSection);
 
             function hideSection() {
+
+                //Enlever couleur barre navigateur mobile
+                $("meta[name='theme-color']").attr("content", "");
+
 
                 //Cacher le contenu de la section
                 $(".section-container").fadeOut(1);
@@ -346,11 +423,15 @@
             
             function home() {
 
+
+                var color = $(body).css("background-color");
+                $("meta[name='theme-color']").attr("content", color);
+
                 $(".nav-home").fadeOut(1);
 
                 //Cacher les sections
                 $(".cat").css({
-                    "animation" : "section-out 1s ease-out",
+                    "animation" : "section-out 1.5s ease-out",
                     "width" : "0",
                     "height" : "0"
                 });
@@ -368,18 +449,29 @@
              *Click sur un projet
              ********************************/
 
-            $(".work-img .work-item").on("click", showWork);
+            $(".work-item a").on("click", showWork);
 
             function showWork() {
-                //on recupère la position de l'élément
-                var position = $(".work-img").index(this);
 
+                //on recupere l'élément
+//                var elem = $(this).parents(".work-item");
+                //on recupère la position de l'élément
+//                var position = $(".work-img").index(elem);
+                var position = $(this).attr("data-position");
+                console.log(position);
 
 //                body.css('overflow', 'hidden');
                 $(".workview div").eq(position).css({
                     "display": "block"
                 }).animate({"bottom": 0}, 500, function() {
                     /*body.css('overflow', 'auto');*/
+                });
+
+
+
+                //Cacher le bouton close section
+                $(".section-close").css({
+                    "z-index" : "99",
                 });
             }
 
@@ -391,6 +483,9 @@
 
             function hideWork() {
 //                body.css('overflow', 'hidden');
+                $(".section-close").css({
+                    "z-index" : "101",
+                });
 
                 $(this).parent().animate({"bottom": "-100vh"}, 500, function() {
 
