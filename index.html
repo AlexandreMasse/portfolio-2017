@@ -53,11 +53,11 @@
         </div>
 
 
-        <!-- NaAVIGATION -->
+        <!-- NAVIGATION -->
 
         <a href="#" class="nav-home"><span class="flaticon-home-01"></span></a>
 
-        <a href="#" class="section-close"><span class="flaticon-cross-03"></span></a>
+        <div class="section-close"><span class="flaticon-cross-03"></span></div>
 
         <!-- Todo-->
 
@@ -76,29 +76,30 @@
                 </picture>
 
                 <h1>Alexandre Massé</h1>
-                <h2>Developpeur</h2>
+
+                <h2>Creative developer</h2>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum labore nulla ut. Ad animi aut consequatur eius eos est neque perferendis perspiciatis qui quod recusandae repudiandae sequi ullam voluptate, voluptates.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias consequatur culpa delectus, dolorem ea earum, ex illo ipsum maxime minima natus nihil numquam omnis porro, quia ut. Fuga, totam.</p>
 
+                <a href="#" class="cv-dl">Télécharger mon CV</a>
 
-
-                <h2>Rejoins moi sur mes différents réseaux sociaux !</h2>
+                <h3>Rejoins moi sur mes différents réseaux sociaux !</h3>
 
                 <div class="social">
-                    <a href="#" title="aide">
+                    <a href="https://github.com/AlexandreMasse" title="Mon Github">
                         <span class="flaticon-social-github"></span>
                     </a>
 
-                    <a href="#">
+                    <a href="https://twitter.com/Alexandre_Masse" title="Mon Twitter">
                         <span class="flaticon-social-twitter-01"></span>
                     </a>
 
-                    <a href="#">
+                    <a href="https://www.flickr.com/photos/alexandre_masse/" title="Mon Flickr">
                         <span class="flaticon-social-flickr"></span>
                     </a>
 
-                    <a href="#">
+                    <a href="https://fr.linkedin.com/in/alexandremasse" title="Mon LinkdIn">
                         <span class="flaticon-social-linkedin"></span>
                     </a>
 
@@ -287,7 +288,7 @@
     <script src="js/jquery-3.1.1.min.js"></script>
 
 
-    <!-- Javascript perso -->
+    <!-- Script perso -->
 
     <script>
     'use strict';
@@ -352,13 +353,10 @@
 
             $(".cat").on("click", showSection);
 
-
-/*
-
-            $(".section-title").on("click", function () {
+            /*$(".section-title").on("click", function () {
                 $(this).parent(".cat" ).on("click", showSection);
-            });
-*/
+            });*/
+
             function showSection () {
                 var section = $(this);
 
@@ -372,6 +370,7 @@
                     "z-index" : "100",
                     "width" : "100%",
                     "height" : "100%",
+                    "cursor" : "default",
                 });
 
                 //Ne plus centrer verticalement
@@ -389,7 +388,6 @@
 
 
                 //Afficher le contenu de la section
-
                 setTimeout(function () {
                     section.find(".section-container").fadeIn(1);
                     section.find(".section-container").css({
@@ -414,17 +412,19 @@
             };
 
 
-            /******************************
+
+            /***********************************
              * Click sur le bouton close
-             * *****************************/
+             * **********************************/
+
 
             $(".section-close").on("click", hideSection);
 
             function hideSection() {
 
+
                 //Enlever couleur barre navigateur mobile
                 $("meta[name='theme-color']").attr("content", "");
-
 
 
                 //Mettre opacité 0
@@ -433,12 +433,17 @@
                 //Cacher le contenu de la section après opacité 0
                 setTimeout(function () {
                     $(".section-container").fadeOut(1);
-                }, 680);
+                }, 600);
+
+
+                //On scrolle vers le haut
+                setTimeout(function () {
+                    $('html, body').animate({scrollTop:0}, 1);
+                }, 301);
 
                 /*Todo*/
 
                 //Remettre les sections à 50% et aligner verticalement
-
                 setTimeout(function () {
 
                     $("section").css({
@@ -446,8 +451,9 @@
                         "width" : "50%",
                         "height" : "50%",
                         "align-items" : "center",
+                        "cursor" : "pointer",
                     });
-                }, 300);
+                }, 350);
 
                 //Afficher les titres des sections
                 setTimeout(function () {
@@ -464,7 +470,7 @@
                 setTimeout(function () {
                     $('.nav-home').fadeIn("slow");
 
-                },1400);
+                },1100);
 
             };
 

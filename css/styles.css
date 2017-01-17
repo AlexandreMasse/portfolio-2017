@@ -144,13 +144,15 @@ NAVIGATION
 
     /*font-size: 7rem;*/
     color: white;
-    transition: color .6s ease;
+    transition: transform .5s ease;
 }
 
 .nav-home:hover {
-    color: #00B5B5;
+    /*color: #00B5B5;*/
 
-    transition: color .6s ease;
+    transform: scale(1.08);
+
+    transition: transform .3s ease;
 
 }
 
@@ -158,9 +160,6 @@ NAVIGATION
 .nav-home span:before {
     font-size: 7rem;
 }
-
-
-
 
 
 
@@ -259,7 +258,7 @@ INTRO
     font-size: 3.5rem;
     /*font-family: 'Lato', sans-serif;
     font-weight: 300;*/
-    font-family: "Mosk Light 300";
+    font-family: "Mosk Light 300", sans-serif;
     text-transform: uppercase;
 
     opacity: 0;
@@ -420,7 +419,7 @@ main .cat .section-title {
 main .cat:hover .section-title {
     transform: scale(1.06);
 
-    transition: transform 0.3s ease-out;
+    transition: transform .3s ease-out;
 }
 
 
@@ -457,7 +456,8 @@ main .cat:hover .section-title {
     background-color: inherit;
     /*margin-top: 3.5rem;*/
 
-    border: 1px red solid;
+    padding-bottom:8rem ;
+
 
 }
 
@@ -507,8 +507,6 @@ main .cat:hover .section-title {
     flex-wrap: wrap;
     justify-content: center;
     /*width: 600px;*/
-
-    border: 1px green solid;
 }
 
 .about .section-container .social a {
@@ -516,10 +514,52 @@ main .cat:hover .section-title {
 }
 
 .about .section-container .social a span::before {
-    font-size: 70px;
+    font-size: 7rem;
     color: white;
+    opacity: 1;
+
+    transition: opacity .7s ease;
 
 }
+
+.about .section-container .social a span:hover::before {
+
+    opacity: .5;
+    transition: opacity .7s ease;
+}
+
+
+
+.about .section-container .cv-dl {
+    color: white;
+    border: white 2px solid;
+    transition: all .7s ease;
+    font-size: 2.5rem;
+    padding: 2rem 4rem;
+    margin: 4rem;
+}
+
+
+.about .section-container .cv-dl:hover {
+    background-color: white;
+    color: rgb(26, 188, 156);
+    border: white 2px solid;
+
+    transition: all.7s ease;
+}
+
+
+.about .section-container h3 {
+    text-transform: uppercase;
+    /*font-family: 'Lato', sans-serif;
+    font-weight: 700;*/
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin: 4rem 4rem;
+}
+
 
 
 
@@ -700,12 +740,6 @@ main .cat:hover .section-title {
 
 
 
-
-
-
-
-
-
 /*Todo*/
 
 
@@ -751,18 +785,58 @@ Media Querie
 *****************************************/
 
 
+
+@media screen and (max-width: 900px) {
+
+
+    /*ABOUT*/
+    .about .section-container p {
+        max-width: 700px;
+    }
+}
+
+
+
+
+
+
+
 @media screen and (max-width: 800px) {
+
+    /*GENERAL*/
     html {
         font-size: 55%;
     }
+
+    /*ABOUT*/
+    .about .section-container p {
+        max-width: 80%;
+    }
+
 }
+
+
 
 
 @media screen and (max-width: 700px) {
     html {
         font-size: 50%;
     }
+
+    /*HOME*/
+    .nav-home span:before {
+        font-size: 8em;
+    }
+
+
+
+    /*ABOUT*/
+    .about .section-container p {
+        font-size: 2.3em;
+    }
 }
+
+
 
 
 
@@ -770,19 +844,56 @@ Media Querie
     html {
         font-size: 45%;
     }
+
+    /*HOME*/
+    .nav-home span:before {
+        font-size: 9em;
+    }
+
+
+
+    /*ABOUT*/
+    .about .section-container p{
+        font-size: 2.6em;
+    }
+
 }
+
+
 
 
 @media screen and (max-width: 500px) {
     html {
         font-size: 40%;
     }
+
+    /*HOME*/
+    .nav-home span:before {
+        font-size: 9.5em;
+    }
+
+
+    /*ABOUT*/
+    .about .section-container h3{
+        font-size: 3em;
+    }
+
+    .about .section-container .cv-dl {
+        font-size: 2.8em;
+    }
+
+
 }
 
 
 @media screen and (max-width: 400px) {
     html {
         font-size: 36%;
+    }
+
+    /*ABOUT*/
+    .about .section-container p{
+        font-size: 3em;
     }
 }
 
@@ -791,7 +902,15 @@ Media Querie
     html {
         font-size: 30%;
     }
+
+
+    /*ABOUT*/
+    .about .section-container p{
+        font-size: 3.3em;
+    }
 }
+
+
 
 
 @media screen and (max-width: 300px) {
