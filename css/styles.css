@@ -40,50 +40,6 @@ body {
  }
 
 
- /***********************************
- KEYFRAMES
- ************************************/
-
-/*Intro des sections*/
-
-@keyframes section-in {
-    0% {
-        width: 0;
-        height: 0;
-    }
-    100% {
-        width: 50%;
-        height: 50%;
-    }
-}
-
-/*Sortie des sections*/
-@keyframes section-out {
-    0% {
-        width: 50%;
-        height: 50%;
-    }
-
-    100% {
-        width: 0;
-        height: 0;
-    }
-}
-
-/*Titre section*/
-
-@keyframes intro-section-titre {
-    0% {
-        opacity: 0;
-    }
-    60% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 
 
 /***************************************
@@ -98,10 +54,8 @@ NAVIGATION
     top: 10%;
     right: 7%;
 
+    color: white;
 
-    color: #fff;
-    /*opacity: 1;*/
-    /*font-size: 4rem;*/
     animation: bouton-close 2s;
 
     transition: transform 1s ease;
@@ -119,7 +73,6 @@ NAVIGATION
 }
 
 
-
 .section-close:hover {
     transform: rotate(180deg);
 
@@ -128,10 +81,10 @@ NAVIGATION
 
 
 
-
 .section-close span:before {
     font-size: 6rem;
 }
+
 
 .nav-home {
     display: none;
@@ -181,11 +134,8 @@ INTRO
     font-size: 4.8rem;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
-    /*font-family: "Mosk Bold 700";*/
     color: white;
-
     text-transform: uppercase;
-
 
     margin-bottom: 3rem;
 }
@@ -204,7 +154,6 @@ INTRO
     }
     20% {
         opacity: 0;
-        /*transform: translateX(-60%);*/
     }
     90% {
         transform: translateY(0%);
@@ -251,11 +200,11 @@ INTRO
     margin-top: 3rem;
 }
 
+
 .intro-dev p {
     font-size: 3.5rem;
-    /*font-family: 'Lato', sans-serif;
-    font-weight: 300;*/
-    font-family: "Mosk Light 300", sans-serif;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
     text-transform: uppercase;
 
     opacity: 0;
@@ -271,7 +220,6 @@ INTRO
     }
     20% {
         opacity: 0;
-        /*transform: translateX(-60%);*/
     }
     90% {
         transform: translateY(0%);
@@ -322,10 +270,9 @@ INTRO
     border: 2px solid white;
 
     color: white;
-    font-family: 'Mosk Bold 700';
-    /*font-weight: 700;*/
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
     font-size: 2.5rem;
-    /*background-color: red;*/
 
     transition: all .7s ease;
     animation: intro-title 2.5s ease 3.2s forwards;
@@ -346,7 +293,6 @@ INTRO
 
     background-color: white;
     color: #00B5B5;
-    /*color: rgb(37, 116, 169);*/
 
     transition: all .7s ease;
 }
@@ -368,11 +314,48 @@ main .cat {
 
     cursor: pointer;
     display: flex;
+    /*flex-direction: column;*/
     justify-content: center;
     align-items: center;
 
     /*animation: intro-section 2s ease-out;*/
 }
+
+
+
+/*Intro des sections*/
+
+@keyframes section-in {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    100% {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+/*Sortie des sections*/
+@keyframes section-out {
+    0% {
+        width: 50%;
+        height: 50%;
+    }
+
+    100% {
+        width: 0;
+        height: 0;
+    }
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -419,6 +402,13 @@ main .cat:hover .section-title {
     transition: transform .3s ease-out;
 }
 
+
+.cat .flaticon-about::before, .cat .flaticon-work::before, .cat .flaticon-skill::before, .cat .flaticon-contact-02::before  {
+    display: block;
+    font-size: 6rem;
+    margin-bottom: 1rem;
+
+}
 
 .cat .section-container {
     display: none;
@@ -468,8 +458,6 @@ main .cat:hover .section-title {
 
 .about .section-container h1 {
     text-transform: uppercase;
-    /*font-family: 'Lato', sans-serif;
-    font-weight: 700;*/
     font-family: "Lato", sans-serif;
     font-weight: 700;
     font-size: 4rem;
@@ -491,7 +479,7 @@ main .cat:hover .section-title {
 .about .section-container p {
     text-align: justify;
     max-width: 800px;
-    font-family: "Mosk Normal 400", sans-serif;
+    font-family: "Lato", sans-serif;
     font-size: 2rem;
 
 }
@@ -570,18 +558,27 @@ main .cat:hover .section-title {
     align-items: center;
     flex-direction: column;
     padding-bottom: 4rem;
+    padding-top: 3rem;
     background-color: inherit;
     /*max-width: 1000px;*/
 }
 
+.work .section-container h1 {
+    font-family: "Lato", sans-serif;
+    font-size: 5rem;
+}
+
+
+
 .work .section-container .work-img {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     max-width: 1000px;
 
 
 }
+
 
 .work-img .work-item {
     display: flex;
@@ -595,63 +592,23 @@ main .cat:hover .section-title {
     margin: 1rem 1rem 3rem 1rem;
 }
 
-/*.work-img figure {
-    position: relative;
-    background-color: white;
-    !*z-index:2;*!
-    z-index:1;
-    margin: 0;
-    width:100%;
-    height:100%;
-}
-
-.work-img figure img {
-    !*max-width: 100%;*!
-    opacity: 1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-.work-img figure:hover img {
-    !*max-width: 100%;*!
-    opacity: .5;
-}
-
-
-.work-img span {
-    position: absolute;
-    opacity: 0;
-    top:50%;
-}
-
-.work-img figure:hover + span {
-    z-index: 3;
-    opacity: 1;
-    transition: opacity 1s ease;
-}*/
-
-
-
-
-
 
 
 .work-img-hover {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Lato', sans-serif;
     position: relative;
     float: left;
     overflow: hidden;
     margin: 10px 1%;
     min-width: 230px;
-    max-width: 315px;
+    max-width: 300px;
     width: 100%;
     color: black;
-    text-align: left;
-    font-size: 16px;
+    text-align: center;
+    font-size: 20px;
     background-color: #fff;
 }
+
 
 .work-img-hover * {
     transition: all 0.45s ease;
@@ -668,7 +625,6 @@ main .cat:hover .section-title {
     top: 0;
     left: 0;
     right: 0;
-    /*z-index: 1;*/
     align-items: center;
     bottom: 0;
     display: flex;
@@ -688,17 +644,23 @@ main .cat:hover .section-title {
     transform: translateY(-100%);
     text-transform: uppercase;
     font-weight: 400;
+
+    margin: 5px 20px;
 }
 
 .work-img-hover h5 {
-    font-weight: normal;
+    font-family: "Lato", sans-serif;
     font-style: italic;
+    font-weight: 400;
+    text-align: center;
     color: #888;
     -webkit-transform: translateY(100%);
     transform: translateY(100%);
+
+    margin: 5px 20px;
 }
 
-.work-img-hover a {
+.work-img-hover div {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -720,36 +682,91 @@ main .cat:hover .section-title {
 
 
 
-/*Todo*/
-
-
-.workview div {
-    position: fixed;
-    z-index: 1000;
+.workview > div {
     display: none;
+    position: fixed;
     left: 0;
     bottom: -100vh;
-    height: 100vh;
-    background-color: red;
+    z-index: 1000;
+
+    min-height: 100vh;
     width:100%;
+    /*background-color: #2980b9;*/
+    background-color: #0077C0;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     /*transition: transform 2s ease;*/
+
+    padding-bottom: 10rem;
 }
 
 
+.workview div img {
+    height: 20rem;
+    width: auto;
+}
+
+
+.workview > div h2 {
+    font-family: "Lato", sans-serif;
+    font-size: 4rem;
+    margin: 2rem 0;
+
+}
+
+.workview > div > p {
+    width: 80%;
+    text-align: justify;
+    font-family: "Lato", sans-serif;
+    font-size: 1.9rem;
+    margin: 0rem 0 2rem 0;
+
+}
+
+
+.workview > div .work-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35rem;
+    height:6rem;
+    color: white;
+    border: 2px solid white;
+    font-family: "Lato", sans-serif;
+    font-size: 2.2rem;
+
+    transition: all .7s ease;
+}
+
+.workview > div .work-link:hover {
+    background-color: white;
+    color: #0077C0;
+    transition: all .7s ease;
+
+}
+
+.workview > div .work-link p {
+    text-align: center;
+
+}
 
 
 .nav-work-close {
     position: absolute;
     left:50%;
+    transform: translateX(-50%);
     bottom: 3rem;
 
-    font-size: 2rem;
+    /*font-size: 3rem;*/
     color: white;
 
 }
 
 .nav-work-close span:before {
-    font-size: 4rem;
+    font-size: 5rem;
     color: white;
 }
 
@@ -764,8 +781,8 @@ SKILL
     align-items: center;
     flex-direction: column;
 
-    padding-top: 2.5rem;
-    padding-bottom: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
 
     background-color: inherit;
 }
@@ -790,13 +807,15 @@ SKILL
     font-family: "Lato", sans-serif;
     color: white;
     text-align: center;
+    margin: 10px 0;
 }
+
 
 .skill h3 {
     font-size: 3.5rem;
     font-family: "Lato", sans-serif;
     font-weight: 300;
-    margin: 20px 0;
+    margin: 35px 0;
 
 
 }
@@ -866,8 +885,6 @@ SKILL
 }
 
 
-
-
 .bar-inner {
     width: 0;
     height: 35px;
@@ -890,6 +907,88 @@ SKILL
 
 
 
+/***************************************
+CONTACT
+****************************************/
+
+.contact .section-container {
+
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+    background-color: #e74c3c;
+
+    padding-bottom: 7rem;
+}
+
+.contact .section-container h2 {
+    margin-top: 7rem;
+    margin-bottom: 0;
+    font-size: 5rem;
+}
+
+.contact .section-container p {
+    /*margin-top: 3rem;*/
+    font-size: 3rem;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+
+}
+
+
+form input, form textarea {
+    width:100%;
+    border: 1px solid white;
+
+    padding: 1.3rem;
+    margin: 1rem 0;
+
+    background-color: #e74c3c;
+    color: white;
+
+    font-size: 1.8rem;
+    transition: all .7s ease;
+}
+
+input {
+    height: 4.5rem;
+}
+
+
+input:hover, textarea:hover, input:focus, textarea:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.25);
+    transition: all .7s ease;
+}
+
+::-webkit-input-placeholder {
+    color: white;
+    opacity: .7;
+}
+:-moz-placeholder {
+    color:  white;
+    opacity: .7;
+}
+::-moz-placeholder {
+    color:    white;
+    opacity:  .7;
+}
+:-ms-input-placeholder {
+    color:    white;
+    opacity: .7;
+}
+
+input[type="submit"]:hover {
+    color: #e74c3c ;
+    background-color: white;
+    cursor: pointer;
+
+}
 
 
 
@@ -931,6 +1030,25 @@ Media Querie
     .skill h2 {
         max-width: 65%;
     }
+
+    /****************WORK**************/
+    .workview > div {
+        padding-bottom: 8rem;
+    }
+    .workview > div > p {
+        font-size: 2.3rem;
+        margin: 0rem 0 3rem 0;
+    }
+    .workview > div .work-link {
+        font-size: 2.3rem;
+    }
+
+    /*************CONTACT***************/
+    form {
+        width:60%;
+    }
+
+
 }
 
 
@@ -948,14 +1066,24 @@ Media Querie
         max-width: 80%;
     }
 
-}
+    /**************WORK******************/
 
+    .nav-work-close span:before {
+        font-size: 7rem;
+    }
+}
 
 
 
 @media screen and (max-width: 700px) {
     html {
         font-size: 50%;
+    }
+
+
+    /*************INTRO*****************/
+    .intro-title {
+        font-size: 3rem;
     }
 
     /************NAVIGATION************/
@@ -982,10 +1110,13 @@ Media Querie
         transform: translateY(0);
         opacity: 1;
     }
-
     .work-img-hover > img {
         opacity: 0.1;
     }
+    .workview > div > p {
+        font-size: 2.5rem;
+    }
+
 }
 
 
@@ -1010,6 +1141,24 @@ Media Querie
     /**************ABOUT***************/
     .about .section-container p{
         font-size: 2.6rem;
+    }
+
+    /**************WORK*****************/
+    .workview > div > p {
+        font-size: 2.8rem;
+    }
+    .workview > div .work-link {
+        width: 40rem;
+        height:8rem;
+        font-size: 2.8rem;
+    }
+
+    /*************CONTACT***************/
+    form input, form textarea {
+        font-size: 2.5rem;
+    }
+    input {
+        height: 6rem;
     }
 }
 
@@ -1049,6 +1198,8 @@ Media Querie
         max-width: 60%;
     }
 
+    /***************WORK***************/
+
 
 }
 
@@ -1087,6 +1238,14 @@ Media Querie
     /**************ABOUT***************/
     .about .section-container p{
         font-size: 3.3em;
+    }
+
+    /*************CONTACT***************/
+    form input, form textarea {
+        font-size: 3rem;
+    }
+    input {
+        height: 7rem;
     }
 }
 
