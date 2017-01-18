@@ -20,8 +20,6 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900" rel="stylesheet">
 
 
-    <!--<link rel="stylesheet" href="font/font.css">-->
-
     <!-- Styles perso -->
     <link rel="stylesheet" href="css/styles.css">
 
@@ -61,7 +59,7 @@
 
         <div class="section-close"><span class="flaticon-cross-03"></span></div>
 
-        <!-- Todo-->
+
 
         <!-- SECTION : ABOUT -->
 

@@ -170,7 +170,7 @@ INTRO
     width: 110%;
 
     margin: 1.2rem;
-    border-bottom: solid 2px white;
+    border: solid 1px white;
 
     animation: intro-me-hr 1s ease .6s forwards;
 }
@@ -235,7 +235,8 @@ INTRO
     width: 110%;
     margin: 0.8rem;
     color: white;
-    border-bottom: solid 2px white;
+    border: solid 1px white;
+    /*background-color: white;*/
 
     animation: intro-dev-hr 1s ease 1.8s forwards;
 }
