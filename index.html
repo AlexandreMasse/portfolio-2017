@@ -103,13 +103,11 @@
                         <span class="flaticon-social-linkedin"></span>
                     </a>
 
-
                 </div>
 
             </div>
 
         </section>
-
 
 
         <!-- SECTION : WORK -->
@@ -238,9 +236,6 @@
                         <a href="#" class="nav-work-close"><span class="flaticon-cross-02"></span></a>
                     </div>
 
-
-
-
                 </div>
 
 
@@ -261,6 +256,176 @@
             <div class="section-title">Mes compétences</div>
 
             <div class="section-container">
+
+                <h2>Mes compétences...</h2>
+
+                <h3>...en développement</h3>
+
+                <div class="skill-container">
+
+
+                    <div class="bar-html skill-dev">
+                        <div class="skill-title">HTML5</div>
+                        <div class="bar" data-width="100%">
+                            <div class="bar-inner"></div>
+                            <div class="bar-percent">100%</div>
+                        </div>
+                    </div>
+
+
+                    <div class="bar-css skill-dev">
+                        <div class="skill-title">CSS3</div>
+                        <div class="bar" data-width="85%">
+                            <div class="bar-inner"></div>
+                            <div class="bar-percent">85%</div>
+                        </div>
+                    </div>
+
+
+                    <div class="bar-javascript skill-dev">
+                        <div class="skill-title">JavaScript / jQuery </div>
+                        <div class="bar" data-width="75%">
+                            <div class="bar-inner"></div>
+                            <div class="bar-percent">75%</div>
+                        </div>
+                    </div>
+
+
+                    <div class="bar-php skill-dev">
+                        <div class="skill-title">PHP</div>
+                        <div class="bar" data-width="65%">
+                            <div class="bar-inner"></div>
+                            <div class="bar-percent">65%</div>
+                        </div>
+                    </div>
+
+
+                    <div class="bar-git skill-dev">
+                        <div class="skill-title">SQL</div>
+                        <div class="bar" data-width="60%">
+                            <div class="bar-inner"></div>
+                            <div class="bar-percent">60%</div>
+                        </div>
+                    </div>
+
+                    <div class="bar-symfony skill-dev">
+                        <div class="skill-title">Symfony</div>
+                        <div class="bar" data-width="50%">
+                            <div class="bar-inner"></div>
+                            <div class="bar-percent">50%</div>
+                        </div>
+                    </div>
+
+
+                    <h3>....en graphisme</h3>
+
+                    <div class="bar-photoshop skill-graph">
+                        <div class="skill-title">Photosphop</div>
+                        <div class="bar" data-width="80%">
+                            <div class="bar-inner"></div>
+                            <div class="bar-percent">80%</div>
+                        </div>
+                    </div>
+
+
+                    <div class="bar-illustrator skill-graph">
+                        <div class="skill-title">Illustrator</div>
+                        <div class="bar" data-width="70%">
+                            <div class="bar-inner"></div>
+                            <div class="bar-percent">70%</div>
+                        </div>
+                    </div>
+
+
+                    <div class="bar-indesign skill-graph">
+                        <div class="skill-title">InDesign</div>
+                        <div class="bar" data-width="65%">
+                            <div class="bar-inner"></div>
+                            <div class="bar-percent">65%</div>
+                        </div>
+                    </div>
+
+
+
+                    <h3>....en audiovisuel</h3>
+
+
+                    <div class="bar-premiere skill-audio">
+                        <div class="skill-title">Première Pro</div>
+                        <div class="bar" data-width="70%">
+                            <div class="bar-inner"></div>
+                            <div class="bar-percent">70%</div>
+                        </div>
+                    </div>
+
+
+                    <div class="bar-after skill-audio">
+                        <div class="skill-title">After Effect</div>
+                        <div class="bar" data-width="50%">
+                            <div class="bar-inner"></div>
+                            <div class="bar-percent">50%</div>
+                        </div>
+                    </div>
+
+
+                    <h3>....en photographie</h3>
+
+
+                    <div class="bar-portrait skill-photo">
+                        <div class="skill-title">Portrait</div>
+                        <div class="bar" data-width="90%">
+                            <div class="bar-inner"></div>
+                            <div class="bar-percent">90%</div>
+                        </div>
+                    </div>
+
+
+                    <div class="bar-nb skill-photo">
+                        <div class="skill-title">Noir & blanc</div>
+                        <div class="bar" data-width="80%">
+                            <div class="bar-inner"></div>
+                            <div class="bar-percent">80%</div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="bar-nuit skill-photo">
+                        <div class="skill-title">De nuit / Light Painting</div>
+                        <div class="bar" data-width="70%">
+                            <div class="bar-inner"></div>
+                            <div class="bar-percent">70%</div>
+                        </div>
+                    </div>
+
+                    <div class="bar-paysage skill-photo">
+                        <div class="skill-title">Paysage / Panorama</div>
+                        <div class="bar" data-width="65%">
+                            <div class="bar-inner"></div>
+                            <div class="bar-percent">65%</div>
+                        </div>
+                    </div>
+
+
+                    <div class="bar-archi skill-photo">
+                        <div class="skill-title">Architecture</div>
+                        <div class="bar" data-width="50%">
+                            <div class="bar-inner"></div>
+                            <div class="bar-percent">50%</div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+
+
+
 
             </div>
 
@@ -387,15 +552,12 @@
                 $('.nav-home').fadeOut(100);
 
 
-                //Afficher le contenu de la section
+                //Afficher le contenu de la section et le mettre en flex
                 setTimeout(function () {
                     section.find(".section-container").fadeIn(1);
                     section.find(".section-container").css({
-                        "display" : "flex",
-                        /*"justify-content": "center",
-                        "align-items" : "center"*/
+                        "display" : "flex"
                     });
-
                 }, 800);
 
                 setTimeout(function(){
@@ -471,6 +633,15 @@
                     $('.nav-home').fadeIn("slow");
 
                 },1100);
+
+
+
+                //Réinitialise les bar dans la section skill
+                setTimeout(function () {
+                    $('.bar-inner').css({
+                        "width" : "0"
+                    });
+                }, 650);
 
             };
 
@@ -555,6 +726,24 @@
 
 
 
+
+            /*******************************
+             * Click sur section Skill
+             * *****************************/
+
+
+            $('.skill').on("click", skillBar);
+
+
+            function skillBar() {
+                //Remplir chaque bar
+                $(".bar").each(function(){
+                    $(this).find(".bar-inner").animate({
+                        "width" : $(this).attr("data-width")
+                    },4000)
+                });
+
+            }
 
         });
     </script>
