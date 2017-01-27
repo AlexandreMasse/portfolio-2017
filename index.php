@@ -65,7 +65,7 @@
 
         <section class="cat about">
 
-            <div class="section-title flaticon-about">A propos de moi</div>
+            <div class="section-title flaticon-about">A propos</div>
 
             <div class="section-container">
 
@@ -80,7 +80,7 @@
                 <h2>Creative developer</h2>
 
                 <p>Je suis actuellement étudiant en deuxième année du DUT "Métiers du multimédia et de l'internet" à Champs-sur-Marne. Cela va faire 2 ans que j'ai découvert le monde du développement web. En ces deux années j'ai su acquérir un certain nombres de connaissances concernant le développement web, mais plus que de la connaissance, j'ai découvert également du plaisir, le plaisir de coder ! C'est la raison pour laquelle je souhaite aujourd'hui devenir developpeur.</p>
-                <p>Quand bien même je fais preuve d'un grand attrait pour le developpment, je suis quelqu'un de très ouvert et curieux qui adore apprendre sans cesse de nouvelles choses. Cette curiosité se travaille tous les jours et nottament grâce à ma passion qui est la photograhie.</p>
+                <p>Quand bien même je fais preuve d'un grand attrait pour le developpement, je suis quelqu'un de très ouvert et curieux qui adore apprendre sans cesse de nouvelles choses. Cette curiosité se travaille tous les jours et nottament grâce à ma passion qui est la photograhie.</p>
 
                 <a href="doc/alexandre-masse-cv.pdf" class="cv-dl">Télécharger mon CV</a>
 
