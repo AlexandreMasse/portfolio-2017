@@ -21,10 +21,10 @@ $(document).ready(function() {
         //Changer couleur barre navigateur mobile
         $("meta[name='theme-color']").attr("content", "");
 
-        //Caher l'intro
+        //Cacher l'intro
         $(".intro").fadeOut("slow");
 
-        //Afficher les sections
+        //Afficher les sections catégories
         $(".cat").css({
             "animation" : "section-in 1s ease-out",
             "width" : "50%",
@@ -35,7 +35,6 @@ $(document).ready(function() {
         setTimeout(function(){
             $(".about .section-title").fadeIn("slow");
         },1000);
-
         setTimeout(function(){
             $(".work .section-title").fadeIn("slow");
         },1200);
@@ -45,7 +44,6 @@ $(document).ready(function() {
         setTimeout(function(){
             $(".skill .section-title").fadeIn("slow");
         },1600);
-
 
         //Afficher le bouton home
         setTimeout(function(){
