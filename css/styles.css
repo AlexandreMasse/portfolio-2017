@@ -514,19 +514,24 @@ main .cat:hover .section-title {
     transition: opacity .7s ease;
 }
 
+.about .section-container .dl {
+    display: flex;
+    justify-content: center;
+}
 
-
-.about .section-container .cv-dl {
+.about .section-container .dl [class^='dl-'] {
     color: white;
     border: white 2px solid;
     transition: all .7s ease;
     font-size: 2.5rem;
-    padding: 2rem 4rem;
+    padding: 2rem 0;
     margin: 4rem;
+    width: 20rem;
+    text-align: center;
 }
 
 
-.about .section-container .cv-dl:hover {
+.about .section-container .dl [class^='dl-']:hover {
     background-color: white;
     color: rgb(26, 188, 156);
     border: white 2px solid;
@@ -1185,7 +1190,7 @@ Media Querie
     .about .section-container h3{
         font-size: 3rem;
     }
-    .about .section-container .cv-dl {
+    .about .section-container [class^='dl-'] {
         font-size: 2.8rem;
     }
 
