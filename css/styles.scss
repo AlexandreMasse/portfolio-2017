@@ -99,11 +99,13 @@ NAVIGATION
 
 
 .nav-home {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
     cursor: pointer;
     display: none;
-    /*position : absolute;*/
-    /*top: 50%;*/
-    /*left: 50%;*/
+
     z-index: 90;
 
     height: 8rem;
@@ -113,6 +115,19 @@ NAVIGATION
 
     /*font-size: 7rem;*/
     transition: .4s ease;
+    animation: homeIn 1.2s ease-out;
+
+
+    @keyframes homeIn {
+        0%, 40% {opacity: 0}
+        100% {opacity: 1}
+    }
+
+    @keyframes homeOut {
+        from {opacity: 1}
+        to {opacity: 0}
+    }
+
 }
 
 .nav-home:hover {
@@ -375,14 +390,13 @@ INTRO
 
 
 
-
 main .cat {
     height: 0;
     width: 0;
     position: absolute;
 
     z-index: 1;
-    transition: all .6s ease-out;
+    //transition: all .6s ease-out;
     /*overflow: hidden;*/
 
     cursor: pointer;
@@ -579,12 +593,12 @@ main .cat {
         }
 
         &::after {
-            bottom: -0.8rem;
+            bottom: -0.9rem;
             right: 0;
         }
 
         &::before {
-            top: -0.8rem;
+            top: -0.9rem;
             left: 0;
        }
 

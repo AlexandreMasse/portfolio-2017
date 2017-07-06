@@ -4,26 +4,15 @@
 
 $(document).ready(function() {
 
-    /********************************
-     * Au chargement de la page
-     * ******************************/
+    /***************************************
+     * Fonctions réutilisables
+     * *************************************/
 
     var body = $('body');
+    var categorie = $(".cat");
 
-    /*********************************************
-     * Clique sur intro
-     * *******************************************/
 
-    $(".intro-title").on("click", btnintro);
-
-    function btnintro () {
-
-        //Changer couleur barre navigateur mobile
-        $("meta[name='theme-color']").attr("content", "");
-
-        //Cacher l'intro
-        $(".intro").fadeOut("slow");
-
+    function categoryIn () {
         //Afficher les sections catégories
         $(".cat").css({
             "animation" : "section-in 1s ease-out",
@@ -31,11 +20,18 @@ $(document).ready(function() {
             "height" : "50%"
         });
 
+        body.css("overflow", "auto");
 
         //Afficher le bouton home
-        setTimeout(function(){
-            $(".nav-home").fadeIn(700);
-        },700);
+       /* setTimeout(function(){
+            $(".nav-home").fadeIn("slow");
+        },200);*/
+
+        $(".nav-home").css({
+            "display" : "block"
+
+        });
+        ;
 
 
         //Afficher titre des sections
@@ -52,8 +48,54 @@ $(document).ready(function() {
             $(".skill .section-title").fadeIn("slow");
         },1600);
 
+    }
 
-    };
+    function categoryOut() {
+
+        //Cacher les sections
+        $(".cat").css({
+            "animation" : "section-out 1s ease-in",
+            "width" : "0",
+            "height" : "0"
+        });
+
+        //Cacher les titres des sections
+        $(".section-title").fadeOut("slow");
+
+        //Cacher le bouton home
+        $('.nav-home').fadeOut(100);
+
+        //Fix overflow
+        body.css("overflow", "hidden");
+
+    }
+
+
+
+    /********************************
+     * Au chargement de la page
+     * ******************************/
+
+
+
+    /*********************************************
+     * Clique sur intro
+     * *******************************************/
+
+    $(".intro-title").on("click", btnintro);
+
+    function btnintro () {
+
+        //Changer couleur barre navigateur mobile
+        $("meta[name='theme-color']").attr("content", "");
+
+        //Cacher l'intro
+        $(".intro").fadeOut("slow");
+
+        //Afficher les sections catégories
+        categoryIn();
+
+    }
 
 
 
@@ -61,7 +103,7 @@ $(document).ready(function() {
      * Survol sur une section
      * ***************************************/
 
-    var categorie = $(".cat");
+
 
     categorie.hover(hoverSectionEnter, hoverSectionLeave);
 
@@ -133,29 +175,37 @@ $(document).ready(function() {
         var color = section.css("background-color");
         $("meta[name='theme-color']").attr("content", color);
 
-        //Section prend tout l'écran
+
+        categoryOut();
+
+
+
+        //On affiche le bouton close
+        setTimeout(function(){
+            $(".section-close").fadeIn("slow");
+        },1200);
+
+
+
+       /* //Section prend tout l'écran
         $(this).css({
             "z-index" : "100",
             "width" : "100%",
             "height" : "100%",
             "cursor" : "default",
-        });
+        });*/
 
-        //Ne plus centrer verticalement
+       /* //Ne plus centrer verticalement
         setTimeout(function(){
             section.css({
                 "align-items" : "flex-start",
             })
-        },800);
-
-        //Cacher le titre de la section
-        $(".section-title").fadeOut("slow");
-
-        //Cacher le bouton home
-        $('.nav-home').fadeOut(100);
+        },800);*/
 
 
-        //Afficher le contenu de la section et le mettre en flex
+
+
+       /* //Afficher le contenu de la section et le mettre en flex
         setTimeout(function () {
             section.find(".section-container").fadeIn(1);
             section.find(".section-container").css({
@@ -167,14 +217,11 @@ $(document).ready(function() {
 
             section.find(".section-container").animate({"opacity": "1"}, 700);
         },900);
+*/
 
 
 
-        //On affiche le bouton close
-        setTimeout(function(){
-            $(".section-close").fadeIn("slow");
-        },1200);
-    };
+    }
 
 
 
@@ -192,6 +239,9 @@ $(document).ready(function() {
         $("meta[name='theme-color']").attr("content", "");
 
 
+        categoryIn();
+
+/*
         //Mettre opacité 0
         $(".section-container").animate({"opacity": "0"}, 300);
 
@@ -206,7 +256,7 @@ $(document).ready(function() {
             $('html, body').animate({scrollTop:0}, 1);
         }, 301);
 
-        /*Todo*/
+        /!*Todo*!/
 
         //Remettre les sections à 50% et aligner verticalement
         setTimeout(function () {
@@ -235,7 +285,7 @@ $(document).ready(function() {
         setTimeout(function () {
             $('.nav-home').fadeIn("slow");
 
-        },1100);
+        },1100);*/
 
 
 
@@ -246,7 +296,7 @@ $(document).ready(function() {
             });
         }, 650);
 
-    };
+    }
 
 
 
@@ -259,21 +309,22 @@ $(document).ready(function() {
 
     function home() {
 
-
         var color = $(body).css("background-color");
         $("meta[name='theme-color']").attr("content", color);
 
-        $(".nav-home").fadeOut(1);
+        categoryOut();
 
-        //Cacher les sections
+       /* $(".nav-home").fadeOut(1);*/
+
+       /* //Cacher les sections
         $(".cat").css({
             "animation" : "section-out 1.5s ease-out",
             "width" : "0",
             "height" : "0"
-        });
+        });*/
 
 
-        $(".section-title").fadeOut("slow");
+        /*$(".section-title").fadeOut("slow");*/
 
 
         //Afficher l'intro
