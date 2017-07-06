@@ -25,6 +25,10 @@
 
 
     <title>Portfolio - Alexandre Massé</title>
+
+    <!-- Google analytics -->
+
+    <link rel="stylesheet" href="https://alexandremasse.fr/js/googleanalytics.js">
 </head>
 <body>
 
