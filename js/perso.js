@@ -31,6 +31,13 @@ $(document).ready(function() {
             "height" : "50%"
         });
 
+
+        //Afficher le bouton home
+        setTimeout(function(){
+            $(".nav-home").fadeIn(700);
+        },700);
+
+
         //Afficher titre des sections
         setTimeout(function(){
             $(".about .section-title").fadeIn("slow");
@@ -45,10 +52,6 @@ $(document).ready(function() {
             $(".skill .section-title").fadeIn("slow");
         },1600);
 
-        //Afficher le bouton home
-        setTimeout(function(){
-            $(".nav-home").fadeIn(700);
-        },1800);
 
     };
 

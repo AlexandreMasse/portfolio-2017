@@ -61,7 +61,7 @@
 
         <!-- NAVIGATION -->
 
-        <div class="nav-home"><span class="flaticon-home-01"></span></div>
+        <div class="nav-home"><!--<span class="flaticon-home-01"></span>--></div>
 
         <div class="section-close"><span class="flaticon-cross-03"></span></div>
 
@@ -71,7 +71,7 @@
 
         <section class="cat about">
 
-            <div class="section-title flaticon-about">A propos</div>
+            <div class="section-title">Qui suis-je ?</div>
 
             <div class="section-container">
 
@@ -121,7 +121,7 @@
 
         <section class="cat work">
 
-            <div class="section-title flaticon-work">Mes projets</div>
+            <div class="section-title ">Projets</div>
 
             <div class="section-container">
 
@@ -306,7 +306,7 @@
 
         <section class="cat skill">
 
-            <div class="section-title flaticon-skill">Mes compétences</div>
+            <div class="section-title">Compétences</div>
 
             <div class="section-container">
 
@@ -475,7 +475,7 @@
 
         <section class="cat contact">
 
-            <div class="section-title flaticon-contact-02">Contact</div>
+            <div class="section-title">Contact</div>
 
             <div class="section-container">
 

@@ -99,23 +99,29 @@ NAVIGATION
 
 
 .nav-home {
+    cursor: pointer;
     display: none;
     /*position : absolute;*/
     /*top: 50%;*/
     /*left: 50%;*/
     z-index: 90;
 
+    height: 8rem;
+    width: 8rem;
+    border: solid $color2 2px;
+    background-color: $color1;
+
     /*font-size: 7rem;*/
-    color: white;
-    transition: transform .5s ease;
+    transition: .4s ease;
 }
 
 .nav-home:hover {
     /*color: #00B5B5;*/
+    //transform: scale(1.08);
 
-    transform: scale(1.08);
+    background-color: $color2;
 
-    transition: transform .3s ease;
+    transition: .4s ease;
 
 }
 
@@ -376,7 +382,7 @@ main .cat {
     position: absolute;
 
     z-index: 1;
-    transition: all .7s ease-out;
+    transition: all .6s ease-out;
     /*overflow: hidden;*/
 
     cursor: pointer;
@@ -419,7 +425,7 @@ main .cat {
     $border-width: 2px;
     $border-width-pourcent: 75%;
     $border-width-pourcent-hover: 100%;
-    $border-width-transition: all ease .6s;
+    $border-width-transition: all ease .4s;
 
 
     &.about {
@@ -550,19 +556,58 @@ main .cat {
 
 
 
-
     .section-title {
+        position: relative;
         display: none;
         text-align: center;
         font-size: 3rem;
-        font-family: 'Lato', sans-serif;
+        //font-family: 'Lato', sans-serif;
+        font-weight: 400;
         color: white;
         cursor: pointer;
         /*animation: intro-section-titre 4s;*/
         text-transform: uppercase;
-        transition: transform .3s ease-out;
+        transition: transform .4s ease-out;
+
+        &::after, &::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: $color2;
+            transition: width .4s cubic-bezier(.23,1,.32,1);
+        }
+
+        &::after {
+            bottom: -0.8rem;
+            right: 0;
+        }
+
+        &::before {
+            top: -0.8rem;
+            left: 0;
+       }
+
 
     }
+
+
+    &:hover .section-title {
+
+        &::after {
+            left: 0;
+            right: auto;
+            width: 100%;
+        }
+
+        &::before {
+            right: 0;
+            left: auto;
+            width: 100%;
+        }
+    }
+
+
 
 /*
     &:hover .section-title {
@@ -571,31 +616,33 @@ main .cat {
     }*/
 
 
+    .section-container {
+        display: none;
+        opacity: 0;
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+        /*padding-top: 2rem;*/
+        color: white;
+        /*font-size: 2rem;*/
+        /*display: flex;*/
+        /*align-items: center;*/
+        /*justify-content: center;*/
+    }
+
+
 }
 
 
 
 
-.cat .flaticon-about::before, .cat .flaticon-work::before, .cat .flaticon-skill::before, .cat .flaticon-contact-02::before  {
+/*.cat .flaticon-about::before, .cat .flaticon-work::before, .cat .flaticon-skill::before, .cat .flaticon-contact-02::before  {
     display: block;
     font-size: 6rem;
     margin-bottom: 1rem;
 
-}
+}*/
 
-.cat .section-container {
-    display: none;
-    opacity: 0;
-    width: 100%;
-    height: auto;
-    min-height: 100%;
-    /*padding-top: 2rem;*/
-    color: white;
-    /*font-size: 2rem;*/
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
-}
 
 
 
