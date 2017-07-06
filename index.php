@@ -19,6 +19,8 @@
     <!-- Font text -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700,800" rel="stylesheet">
+
 
     <!-- Styles perso -->
     <link rel="stylesheet" href="css/styles.css">
@@ -45,7 +47,7 @@
 
 
             <div class="intro-title">
-                <p>Mon portfolio</p>
+                <p>Hello !</p>
             </div>
 
 

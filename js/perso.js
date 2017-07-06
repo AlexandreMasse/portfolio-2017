@@ -55,11 +55,68 @@ $(document).ready(function() {
 
 
     /******************************************
+     * Survol sur une section
+     * ***************************************/
+
+    var categorie = $(".cat");
+
+    categorie.hover(hoverSectionEnter, hoverSectionLeave);
+
+    function hoverSectionEnter () {
+        if($(this).hasClass("about")) {
+            $(this).addClass('hover');
+            $('.work').addClass('hover');
+        }
+
+         if($(this).hasClass("work")) {
+            $(this).addClass('hover');
+            $('.contact').addClass('hover');
+        }
+
+         if($(this).hasClass("skill")) {
+            $(this).addClass('hover');
+            $('.about').addClass('hover');
+        }
+
+         if($(this).hasClass("contact")) {
+            $(this).addClass('hover');
+            $('.skill').addClass('hover');
+        }
+
+    }
+
+    function hoverSectionLeave () {
+        if($(this).hasClass("about")) {
+            $(this).removeClass('hover');
+            $('.work').removeClass('hover');
+        }
+
+        if($(this).hasClass("work")) {
+            $(this).removeClass('hover');
+            $('.contact').removeClass('hover');
+        }
+
+        if($(this).hasClass("skill")) {
+            $(this).removeClass('hover');
+            $('.about').removeClass('hover');
+        }
+
+        if($(this).hasClass("contact")) {
+            $(this).removeClass('hover');
+            $('.skill').removeClass('hover');
+        }
+
+
+    }
+
+
+
+    /******************************************
      * Clique sur une section
      * ***************************************/
 
 
-    $(".cat").on("click", showSection);
+    categorie.on("click", showSection);
 
     /*$(".section-title").on("click", function () {
      $(this).parent(".cat" ).on("click", showSection);
