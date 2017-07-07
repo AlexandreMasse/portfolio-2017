@@ -10,6 +10,7 @@ $(document).ready(function() {
 
     var body = $('body');
     var categorie = $(".cat");
+    var home = $(".nav-home");
 
 
     function categoryIn () {
@@ -27,11 +28,10 @@ $(document).ready(function() {
             $(".nav-home").fadeIn("slow");
         },200);*/
 
-        $(".nav-home").css({
+        home.css({
             "display" : "block"
-
         });
-        ;
+
 
 
         //Afficher titre des sections
@@ -63,7 +63,7 @@ $(document).ready(function() {
         $(".section-title").fadeOut("slow");
 
         //Cacher le bouton home
-        $('.nav-home').fadeOut(100);
+        home.fadeOut(100);
 
         //Fix overflow
         body.css("overflow", "hidden");
@@ -225,6 +225,10 @@ $(document).ready(function() {
 
 
 
+
+    /*Todo : nouveau bouton close (un carré dans un coin)*/
+
+
     /********************************************
      * Click sur le bouton close
      * ******************************************/
@@ -300,14 +304,90 @@ $(document).ready(function() {
 
 
 
+
+
+    /****************************************
+     * Hover sur le bouton home
+     * *************************************/
+
+    home.hover(homeHoverIn, homeHoverOut);
+
+    var compteurIn = 0;
+    var tour = 0;
+    var multiplication = 0;
+
+    function homeHoverIn () {
+
+        multiplication = tour*360;
+
+        compteurIn++;
+
+        if (compteurIn > 4) {
+            compteurIn = 1;
+        }
+
+        /*console.log('tour : ' + tour);
+        console.log('milti :' + multiplication);
+        console.log('fois :  :' + compteurIn);*/
+
+
+        if (compteurIn === 1) {
+            var angle1 = 45 + multiplication;
+            home.css("transform", "translateY(-50%) rotate(" + angle1 + "deg)");
+        }
+        if (compteurIn === 2) {
+            var angle3 = 135 + multiplication;
+            home.css("transform", "translateY(-50%) rotate(" + angle3 + "deg)");
+        }
+
+        if (compteurIn === 3) {
+            var angle5 = 225 + multiplication;
+            home.css("transform", "translateY(-50%) rotate(" + angle5 + "deg)");
+        }
+
+        if (compteurIn === 4) {
+            var angle7 = 315 + multiplication;
+            home.css("transform", "translateY(-50%) rotate(" + angle7 + "deg)");
+        }
+
+
+    }
+
+
+    function homeHoverOut () {
+
+        if (compteurIn === 1) {
+            var angle2 = 90 + multiplication;
+            home.css("transform", "translateY(-50%) rotate(" + angle2 + "deg)");
+        }
+        if (compteurIn === 2) {
+            var angle4 = 180 + multiplication;
+            home.css("transform", "translateY(-50%) rotate(" + angle4 + "deg)");
+        }
+        if (compteurIn === 3) {
+            var angle6 = 270 + multiplication;
+            home.css("transform", "translateY(-50%) rotate(" + angle6 + "deg)");
+        }
+        if (compteurIn === 4) {
+            var angle8 = 360 + multiplication;
+            home.css("transform", "translateY(-50%) rotate(" + angle8 + "deg)");
+        }
+
+        //Compteur tour
+        if (compteurIn%4 === 0 && compteurIn > 0) {
+            tour++;
+        }
+
+    }
+
     /****************************************
      * Click sur le bouton home
      * *************************************/
 
 
-    $(".nav-home").on("click", home);
+    home.on("click", homeClick);
 
-    function home() {
+    function homeClick() {
 
         var color = $(body).css("background-color");
         $("meta[name='theme-color']").attr("content", color);
