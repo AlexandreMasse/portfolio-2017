@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 
-    <meta name="theme-color" content="#00B5B5">
+    <meta name="theme-color" content="#000000">
 
     <!-- Normalize -->
     <link rel="stylesheet" href="css/normalize.css">
@@ -63,7 +63,10 @@
 
         <div class="nav-home"><!--<span class="flaticon-home-01"></span>--></div>
 
-        <div class="section-close"><span class="flaticon-cross-03"></span></div>
+
+        <!--Todo : animation croix avec span-->
+
+        <div class="section-close"><span></span></div>
 
 
 

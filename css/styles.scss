@@ -63,14 +63,161 @@ NAVIGATION
     z-index: 200;
     display: none;
     position : fixed;
-    top: 10%;
-    right: 7%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
 
     color: white;
 
-    animation: bouton-close 2s;
+    width: 10rem;
+    height: 10rem;
+
+    //border: solid $color2 2px;
+
+    //animation: bouton-close 2s;
 
     transition: transform 1s ease;
+
+
+
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        background-color: $color2;
+
+        transition: ease .4s;
+
+    }
+
+    &::before {
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 2px;
+
+        animation: close-before .4s .8s forwards;
+
+        /*
+        transform-origin: 0 0;
+        transform: rotate(90deg) translateX(-50%);*/
+    }
+
+    @keyframes close-before {
+        from { width: 0 }
+        to { width: 100%}
+    }
+
+
+    /*&:hover::before {
+        top: 0;
+        left: 50%;
+        width: 70%;
+
+        transform: rotate(0deg) translateX(-50%);
+    }*/
+
+
+    &::after {
+        top: 0;
+        right: 0;
+
+        width: 2px;
+        height: 0;
+
+        animation: close-after .4s .4s forwards;
+
+        //transform-origin: 100% 0;
+        //transform: rotate(-90deg) translateX(50%);
+    }
+
+    @keyframes close-after {
+        from { height: 0 }
+        to { height: 100%}
+    }
+
+   /* &:hover::after {
+        bottom: 0;
+        right: 50%;
+        width: 70%;
+        transform: rotate(0deg) translateX(50%);
+    }*/
+
+    /*&:hover {
+        transform: rotate(180deg);
+
+        transition: transform 1s ease;
+    }
+
+    */
+
+    /*Todo : animation croix*/
+
+    span {
+        display: block;
+        height: 100%;
+        width: 100%;
+
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            background-color: $color2;
+            transform-origin: center;
+            transition: ease .4s;
+
+        }
+
+        &::before {
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 2px;
+
+            transform: translateX(-50%) rotate(45deg);
+
+            animation: close-cross .4s 1.2s forwards;
+        }
+
+
+
+        &:hover::before {
+            transform-origin: 0;
+            transform: translateX(-50%) rotate(30deg);
+            transition: ease .4s;
+        }
+
+
+        &::after {
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 2px;
+
+            transform: translateX(-50%) rotate(-45deg);
+
+            animation: close-cross .4s 1.2s forwards;
+
+            //transform-origin: 100% 0;
+            //transform: rotate(-90deg) translateX(50%);
+        }
+
+        &:hover::after {
+            transform-origin: 0;
+            transform: translateX(-50%) rotate(-30deg);
+            transition: ease .4s;
+        }
+
+
+
+
+        @keyframes close-cross {
+            from { width: 0 }
+            to { width: 60%}
+        }
+
+    }
+
 }
 
 
@@ -85,17 +232,6 @@ NAVIGATION
 }
 
 
-.section-close:hover {
-    transform: rotate(180deg);
-
-    transition: transform 1s ease;
-}
-
-
-
-.section-close span:before {
-    font-size: 6rem;
-}
 
 
 .nav-home {
@@ -115,7 +251,7 @@ NAVIGATION
 
     /*font-size: 7rem;*/
     transition: .4s ease;
-    animation: homeIn 1.2s ease-out;
+    //animation: homeIn 1.2s ease-out;
 
 
     @keyframes homeIn {
@@ -129,6 +265,7 @@ NAVIGATION
     }
 
 }
+
 
 .nav-home:hover {
     /*color: #00B5B5;*/
@@ -325,12 +462,10 @@ INTRO
     }
 
 
-
     &:hover {
        letter-spacing: 0.5rem;
         transition: all .4s ease;
     }
-
 
 
 
@@ -376,7 +511,6 @@ INTRO
         width: 70%;
         transform: rotate(0deg) translateX(50%);
     }
-
 
 }
 
@@ -566,7 +700,6 @@ main .cat {
         }
 
     }
-
 
 
 

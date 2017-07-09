@@ -24,11 +24,8 @@ $(document).ready(function() {
         body.css("overflow", "auto");
 
         //Afficher le bouton home
-       /* setTimeout(function(){
-            $(".nav-home").fadeIn("slow");
-        },200);*/
-
         home.css({
+            "animation": "homeIn 1.2s ease-out forwards",
             "display" : "block"
         });
 
@@ -63,7 +60,17 @@ $(document).ready(function() {
         $(".section-title").fadeOut("slow");
 
         //Cacher le bouton home
-        home.fadeOut(100);
+        home.css("animation", "homeOut 1s ease-out forwards");
+
+        setTimeout(function(){
+            home.hide();
+        },1200);
+
+      /*  home.animate({opacity: '0'}, 1000, function () {
+            home.css()
+        });*/
+        // home.fadeOut(500);
+
 
         //Fix overflow
         body.css("overflow", "hidden");
@@ -102,8 +109,6 @@ $(document).ready(function() {
     /******************************************
      * Survol sur une section
      * ***************************************/
-
-
 
     categorie.hover(hoverSectionEnter, hoverSectionLeave);
 
@@ -151,7 +156,6 @@ $(document).ready(function() {
             $('.skill').removeClass('hover');
         }
 
-
     }
 
 
@@ -177,7 +181,6 @@ $(document).ready(function() {
 
 
         categoryOut();
-
 
 
         //On affiche le bouton close
@@ -220,13 +223,8 @@ $(document).ready(function() {
 */
 
 
-
     }
 
-
-
-
-    /*Todo : nouveau bouton close (un carré dans un coin)*/
 
 
     /********************************************
@@ -280,17 +278,18 @@ $(document).ready(function() {
         },800);
 
 
-        //Faire disparaitre le bouton close
-        setTimeout(function () {
-            $(".section-close").fadeOut();
-        }, 100);
-
         //Faire apparaitre le bouton home
         setTimeout(function () {
             $('.nav-home').fadeIn("slow");
 
         },1100);*/
 
+
+
+        //Faire disparaitre le bouton close
+        setTimeout(function () {
+            $(".section-close").fadeOut();
+        }, 50);
 
 
         //Réinitialise les bar dans la section skill
