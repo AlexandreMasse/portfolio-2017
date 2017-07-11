@@ -79,16 +79,22 @@
 
         <section id="about-content" class="section-container">
 
+            <div id="about-content-title">
+                <p>Qui suis-je ? </p>
+                <hr>
+            </div>
+
+
             <picture class="photo-me">
                 <source media="(min-width: 250px)" srcset="img/me1.jpg 1x, img/me2.jpg 2x">
-                <img src="img/me2.jpg" alt="">
+                <img src="img/me2.jpg" alt="Moi">
             </picture>
 
             <h1>Alexandre Massé</h1>
 
             <h2>Creative developer</h2>
 
-            <p>Étant accepté aux Gobelins en Bachelor « Designer & Développeur Interactif » avec l'option développement, je suis à la recherche d’une alternance en développement front à partir de septembre 2017.</p>
+            <p>Étant accepté aux <strong>Gobelins</strong> en Bachelor « Designer & Développeur Interactif » avec l'option développement, je suis à la <strong>recherche d’une alternance</strong> en développement front à partir de septembre 2017.</p>
 
             <p>Très curieux et motivé je suis sans cesse à la recherche de nouvelles choses à apprendre et à explorer. L'exploration et l'innovation sont d’ailleurs deux aspects que je cherche à retranscrire dans mon travail, ce qui fait que je suis si attaché à “l’esprit startup” et que je n'hésite jamais à relever les challenges !</p>
 
@@ -103,19 +109,19 @@
             <h3>Rejoins moi sur mes différents réseaux sociaux !</h3>
 
             <div class="social">
-                <a href="https://github.com/AlexandreMasse" title="Mon Github">
+                <a href="https://github.com/AlexandreMasse" title="Mon Github" target="_blank">
                     <span class="flaticon-social-github"></span>
                 </a>
 
-                <a href="https://twitter.com/Alexandre_Masse" title="Mon Twitter">
+                <a href="https://twitter.com/Alexandre_Masse" title="Mon Twitter" target="_blank">
                     <span class="flaticon-social-twitter-01"></span>
                 </a>
 
-                <a href="https://www.flickr.com/photos/alexandre_masse/" title="Mon Flickr">
+                <a href="https://www.flickr.com/photos/alexandre_masse/" title="Mon Flickr" target="_blank">
                     <span class="flaticon-social-flickr"></span>
                 </a>
 
-                <a href="https://fr.linkedin.com/in/alexandremasse" title="Mon LinkdIn">
+                <a href="https://fr.linkedin.com/in/alexandremasse" title="Mon LinkdIn" target="_blank">
                     <span class="flaticon-social-linkedin"></span>
                 </a>
             </div>

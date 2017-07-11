@@ -25,7 +25,7 @@ $(document).ready(function() {
 
         //Afficher le bouton home
         home.css({
-            "animation": "homeIn 1.2s ease-out forwards",
+            "animation": "homeIn 1s ease-out forwards",
             "display" : "block"
         });
 
@@ -60,7 +60,7 @@ $(document).ready(function() {
         categorie.find('h1').fadeOut("slow");
 
         //Cacher le bouton home
-        home.css("animation", "homeOut 1s ease-out forwards");
+        home.css("animation", "homeOut 1s 200ms ease-out forwards");
 
         setTimeout(function(){
             home.hide();
@@ -258,7 +258,7 @@ $(document).ready(function() {
         //Afiche les catégories
         setTimeout(function () {
             categoryIn();
-        }, 800);
+        }, 300);
 
 
 /*
