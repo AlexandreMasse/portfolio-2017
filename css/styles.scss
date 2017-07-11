@@ -3,11 +3,21 @@
 $color1 : black;
 $color2 : white;
 
-$color-old1 : #00B5B5;
-$color-old1 : #1abc9c;
-$color-old1 : #3498db;
-$color-old1 : #f39c12;
-$color-old1 : #e74c3c;
+$color-old : #00B5B5;
+$color-old : #1abc9c;
+$color-old : #3498db;
+$color-old : #f39c12;
+$color-old : #e74c3c;
+
+
+$media900 : 900px;
+$media800 : 800px;
+$media700 : 700px;
+$media600 : 600px;
+$media500 : 500px;
+$media400 : 400px;
+$media350 : 350px;
+$media300 : 300px;
 
 
 *{
@@ -19,11 +29,49 @@ $color-old1 : #e74c3c;
 html {
     font-size: 62.5%;
     font-family: 'Work Sans', sans-serif;
+
+    @media screen and (max-width: $media800) {
+        font-size: 55%;
+    }
+
+    @media screen and (max-width: $media700) {
+        font-size: 50%;
+    }
+
+    @media screen and (max-width: $media600) {
+        font-size: 45%;
+    }
+
+    @media screen and (max-width: $media500) {
+        font-size: 40%;
+    }
+
+    @media screen and (max-width: $media400) {
+        font-size: 36%;
+    }
+
+    @media screen and (max-width: $media350) {
+        font-size: 30%;
+    }
+
+    @media screen and (max-width: $media300) {
+        font-size: 26%;
+    }
+
+
+
 }
 
 
-html, body, main {
+html, body {
     height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    min-height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -31,9 +79,14 @@ html, body, main {
 
 
 
+
+
+
+
 body {
     //background-color: #00B5B5;
     background-color: $color1;
+    color: white;
     /*background-color: rgb(37, 116, 169);*/
     /*background-color: #ecf0f1;*/
 }
@@ -51,6 +104,14 @@ body {
      flex-direction: column;
  }
 
+/***************************************
+Keyframes réutilisable
+*****************************************/
+
+@keyframes fadeIn {
+    from { opacity: 0}
+    to { opacity: 1}
+}
 
 
 
@@ -519,12 +580,12 @@ INTRO
 
 
 /*********************************************
-*SECTIONS
+*SECTIONS CATEGORIE
 **********************************************/
 
 
 
-main .cat {
+main section.cat {
     height: 0;
     width: 0;
     position: absolute;
@@ -576,7 +637,7 @@ main .cat {
     $border-width-transition: all ease .4s;
 
 
-    &.about {
+    &.about-title {
         top: 0;
         left: 0;
 
@@ -609,7 +670,7 @@ main .cat {
 
 
 
-    &.work {
+    &.work-title {
         top: 0;
         right: 0;
         //background-color: #3498db;
@@ -640,7 +701,7 @@ main .cat {
 
 
 
-    &.skill {
+    &.skill-title {
         bottom: 0;
         left: 0;
         //background-color: #f39c12;
@@ -671,7 +732,7 @@ main .cat {
 
 
 
-    &.contact {
+    &.contact-title {
         bottom: 0;
         right: 0;
         //background-color: #e74c3c;
@@ -703,7 +764,7 @@ main .cat {
 
 
 
-    .section-title {
+    h1 {
         position: relative;
         display: none;
         text-align: center;
@@ -739,7 +800,7 @@ main .cat {
     }
 
 
-    &:hover .section-title {
+    &:hover h1 {
 
         &::after {
             left: 0;
@@ -763,19 +824,7 @@ main .cat {
     }*/
 
 
-    .section-container {
-        display: none;
-        opacity: 0;
-        width: 100%;
-        height: auto;
-        min-height: 100%;
-        /*padding-top: 2rem;*/
-        color: white;
-        /*font-size: 2rem;*/
-        /*display: flex;*/
-        /*align-items: center;*/
-        /*justify-content: center;*/
-    }
+
 
 
 }
@@ -796,125 +845,213 @@ main .cat {
 
 
 /*****************************************
+* SECTIONS CONTENU CATEGORIE
+*******************************************/
+
+[id$="-content"] {
+    display: none;
+    //opacity: 0;
+    width: 100%;
+    //height: auto;
+    //min-height: 100%;
+    /*padding-top: 2rem;*/
+
+    /*font-size: 2rem;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+}
+
+
+
+
+
+/*****************************************
 * ABOUT
 *******************************************/
 
-.about .section-container {
-    /*display: flex;*/
-    align-items: center;
-    /*justify-content: center;*/
-    flex-direction: column;
 
+$about-delay : 1s;
+$about-duration : 2.5s;
+$about-interval : 150ms;
+$about-function : ease;
+
+
+#about-content {
+    //display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
     /*max-width: 1100px;*/
     background-color: inherit;
     /*margin-top: 3.5rem;*/
 
-    padding-bottom:8rem ;
+    padding-bottom:8rem;
 
 
-}
+    .photo-me img {
+        opacity: 0;
+        margin-top: 3rem;
+        border-radius: 50%;
+        height: 25rem;
+        width:25rem;
+
+        animation: fadeIn $about-duration $about-delay+$about-interval*0 $about-function forwards;
+    }
+
+    h1 {
+        opacity: 0;
+        text-transform: uppercase;
+        //font-family: "Lato", sans-serif;
+        font-weight: 700;
+        font-size: 4rem;
+        margin: 1rem ;
+        animation: fadeIn $about-duration $about-delay+$about-interval*1 $about-function forwards;
+    }
+
+    h2 {
+        opacity: 0;
+         text-transform: uppercase;
+         /*font-family: 'Lato', sans-serif;
+         font-weight: 700;*/
+         font-family: "Lato", sans-serif;
+         font-weight: 300;
+         font-size: 2.5rem;
+         margin: 0 0 4rem 0;
+        animation: fadeIn $about-duration $about-delay+$about-interval*2 $about-function forwards;
+    }
+
+    p {
+        opacity: 0;
+        text-align: justify;
+        max-width: 800px;
+        font-family: "Lato", sans-serif;
+        font-size: 2rem;
+
+        &:nth-of-type(1) {
+            animation: fadeIn $about-duration $about-delay+$about-interval*3 $about-function forwards;
+        }
+        &:nth-of-type(2) {
+            animation: fadeIn $about-duration $about-delay+$about-interval*4 $about-function forwards;
+        }
+        &:nth-of-type(3) {
+            animation: fadeIn $about-duration $about-delay+$about-interval*5 $about-function forwards;
+        }
 
 
-.about .section-container .photo-me img{
-    margin-top: 3rem;
-    border-radius: 50%;
-    height: 25rem;
-    width:25rem;
-}
+        @media screen and (max-width: $media900) {
+                max-width: 700px;
+        }
 
-.about .section-container h1 {
-    text-transform: uppercase;
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    font-size: 4rem;
-    margin: 1rem ;
-}
+        @media screen and (max-width: $media800) {
+            max-width: 80%;
+        }
 
+        @media screen and (max-width: $media700) {
+            font-size: 2.3rem;
+        }
 
+        @media screen and (max-width: $media600) {
+            font-size: 2.6rem;
+        }
 
-.about .section-container h2 {
-    text-transform: uppercase;
-    /*font-family: 'Lato', sans-serif;
-    font-weight: 700;*/
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
-    font-size: 2.5rem;
-    margin: 0 0 4rem 0;
-}
+        @media screen and (max-width: $media400) {
+            font-size: 3rem;
+        }
 
-.about .section-container p {
-    text-align: justify;
-    max-width: 800px;
-    font-family: "Lato", sans-serif;
-    font-size: 2rem;
-
-}
+        @media screen and (max-width: $media350) {
+            font-size: 3.3rem;
+        }
 
 
+    }
 
-.about .section-container .social {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    /*width: 600px;*/
-}
+    .dl {
+        opacity: 0;
+        animation: fadeIn $about-duration $about-delay+$about-interval*6 $about-function forwards;
 
-.about .section-container .social a {
-    margin: 0 4rem;
-}
+        [class^='dl-'] {
+            display: inline-block;
+            color: white;
+            border: white 2px solid;
+            transition: all .7s ease;
+            font-size: 2.5rem;
+            padding: 2rem 0;
+            margin: 4rem;
+            width: 20rem;
+            text-align: center;
 
-.about .section-container .social a span::before {
-    font-size: 7rem;
-    color: white;
-    opacity: 1;
+            &:hover {
+                background-color: white;
+                color: rgb(26, 188, 156);
+                border: white 2px solid;
 
-    transition: opacity .7s ease;
-
-}
-
-.about .section-container .social a span:hover::before {
-
-    opacity: .5;
-    transition: opacity .7s ease;
-}
-
-.about .section-container .dl {
-    display: flex;
-    justify-content: center;
-}
-
-.about .section-container .dl [class^='dl-'] {
-    color: white;
-    border: white 2px solid;
-    transition: all .7s ease;
-    font-size: 2.5rem;
-    padding: 2rem 0;
-    margin: 4rem;
-    width: 20rem;
-    text-align: center;
-}
+                transition: all.7s ease;
+            }
 
 
-.about .section-container .dl [class^='dl-']:hover {
-    background-color: white;
-    color: rgb(26, 188, 156);
-    border: white 2px solid;
+            @media screen and (max-width: $media500) {
+                font-size: 2.8rem;
+            }
 
-    transition: all.7s ease;
-}
+        }
+
+    }
 
 
-.about .section-container h3 {
-    text-transform: uppercase;
-    /*font-family: 'Lato', sans-serif;
-    font-weight: 700;*/
-    text-align: center;
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-size: 2.5rem;
-    margin: 4rem 4rem;
+    h3 {
+        opacity: 0;
+        text-transform: uppercase;
+        /*font-family: 'Lato', sans-serif;
+        font-weight: 700;*/
+        text-align: center;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-size: 2.5rem;
+        margin: 4rem 4rem;
+
+        animation: fadeIn $about-duration $about-delay+$about-interval*7 $about-function forwards;
+
+
+        @media screen and (max-width: $media500) {
+            font-size: 3rem;
+        }
+
+    }
+
+    .social {
+        opacity: 0;
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         justify-content: center;
+         /*width: 600px;*/
+
+        animation: fadeIn $about-duration $about-delay+$about-interval*8 $about-function forwards;
+
+        a {
+            margin: 0 4rem;
+
+            span::before {
+                font-size: 7rem;
+                color: white;
+                opacity: 1;
+
+                transition: opacity .7s ease;
+
+            }
+
+            span:hover::before {
+
+                opacity: .5;
+                transition: opacity .7s ease;
+            }
+        }
+    }
+
+
+
 }
 
 
@@ -1387,12 +1524,12 @@ Media Querie
 ******************************************/
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: $media900) {
 
-    /*ABOUT*/
-    .about .section-container p {
+    /*!*ABOUT*!
+    #about-content p {
         max-width: 700px;
-    }
+    }*/
 
     /*************SKILL***************/
     .skill-container {
@@ -1427,16 +1564,15 @@ Media Querie
 
 
 
-@media screen and (max-width: 800px) {
-
-    html {
-        font-size: 55%;
-    }
-
-    /**************ABOUT***************/
-    .about .section-container p {
-        max-width: 80%;
-    }
+@media screen and (max-width: $media800) {
+    /*
+        html {
+            font-size: 55%        }
+    /*
+        !**************ABOUT***************!
+        .about .section-container p {
+            max-width: 80%;
+        }*/
 
     /**************WORK******************/
 
@@ -1447,11 +1583,11 @@ Media Querie
 
 
 
-@media screen and (max-width: 700px) {
-    html {
+@media screen and (max-width: $media700) {
+    /*html {
         font-size: 50%;
     }
-
+*/
 
     /*************INTRO*****************/
     .intro-title {
@@ -1459,9 +1595,10 @@ Media Querie
     }
 
     /************NAVIGATION************/
-    .section-close {
+   /* .section-close {
         top: 7%;
-    }
+    }*/
+
     .section-close span:before {
         font-size: 6.3rem;
     }
@@ -1472,9 +1609,9 @@ Media Querie
     }
 
     /**************ABOUT***************/
-    .about .section-container p {
+   /* .about .section-container p {
         font-size: 2.3rem;
-    }
+    }*/
 
     /****************WORK**************/
     .work-img-hover h3,
@@ -1495,10 +1632,10 @@ Media Querie
 
 
 
-@media screen and (max-width: 600px) {
-    html {
+@media screen and (max-width: $media600) {
+   /* html {
         font-size: 45%;
-    }
+    }*/
 
     /************NAVIGATION************/
     .section-close span:before {
@@ -1511,9 +1648,9 @@ Media Querie
     }
 
     /**************ABOUT***************/
-    .about .section-container p{
+    /*.about .section-container p{
         font-size: 2.6rem;
-    }
+    }*/
 
     /**************WORK*****************/
     .workview > div > p {
@@ -1537,10 +1674,10 @@ Media Querie
 
 
 
-@media screen and (max-width: 500px) {
-    html {
+@media screen and (max-width: $media500) {
+    /*html {
         font-size: 40%;
-    }
+    }*/
 
     /************NAVIGATION************/
     .section-close span:before {
@@ -1553,12 +1690,12 @@ Media Querie
     }
 
     /**************ABOUT***************/
-    .about .section-container h3{
+   /* .about .section-container h3{
         font-size: 3rem;
     }
     .about .section-container [class^='dl-'] {
         font-size: 2.8rem;
-    }
+    }*/
 
     /*************SKILL***************/
     .skill-container {
@@ -1578,10 +1715,10 @@ Media Querie
 
 
 
-@media screen and (max-width: 400px) {
-    html {
+@media screen and (max-width: $media400) {
+   /* html {
         font-size: 36%;
-    }
+    }*/
 
     /************NAVIGATION************/
     .section-close span:before {
@@ -1589,18 +1726,18 @@ Media Querie
     }
 
     /**************ABOUT***************/
-    .about .section-container p{
+   /* .about .section-container p{
         font-size: 3rem;
-    }
+    }*/
 }
 
 
 
 
-@media screen and (max-width: 350px) {
-    html {
+@media screen and (max-width: $media350) {
+    /*html {
         font-size: 30%;
-    }
+    }*/
 
     /************NAVIGATION************/
     .section-close span:before {
@@ -1608,9 +1745,9 @@ Media Querie
     }
 
     /**************ABOUT***************/
-    .about .section-container p{
+    /*.about .section-container p{
         font-size: 3.3em;
-    }
+    }*/
 
     /*************CONTACT***************/
     form input, form textarea {
@@ -1625,9 +1762,9 @@ Media Querie
 
 
 @media screen and (max-width: 300px) {
-    html {
+   /* html {
         font-size: 26%;
-    }
+    }*/
 
     /************NAVIGATION************/
     .section-close span:before {

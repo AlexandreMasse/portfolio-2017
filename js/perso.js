@@ -21,7 +21,7 @@ $(document).ready(function() {
             "height" : "50%"
         });
 
-        body.css("overflow", "auto");
+        // body.css("overflow", "auto");
 
         //Afficher le bouton home
         home.css({
@@ -33,16 +33,16 @@ $(document).ready(function() {
 
         //Afficher titre des sections
         setTimeout(function(){
-            $(".about .section-title").fadeIn("slow");
+            $(".about-title h1").fadeIn("slow");
         },1000);
         setTimeout(function(){
-            $(".work .section-title").fadeIn("slow");
+            $(".work-title h1").fadeIn("slow");
         },1200);
         setTimeout(function(){
-            $(".contact .section-title").fadeIn("slow");
+            $(".contact-title h1").fadeIn("slow");
         },1400);
         setTimeout(function(){
-            $(".skill .section-title").fadeIn("slow");
+            $(".skill-title h1").fadeIn("slow");
         },1600);
 
     }
@@ -57,7 +57,7 @@ $(document).ready(function() {
         });
 
         //Cacher les titres des sections
-        $(".section-title").fadeOut("slow");
+        categorie.find('h1').fadeOut("slow");
 
         //Cacher le bouton home
         home.css("animation", "homeOut 1s ease-out forwards");
@@ -73,9 +73,13 @@ $(document).ready(function() {
 
 
         //Fix overflow
-        body.css("overflow", "hidden");
+        // body.css("overflow", "hidden");
 
     }
+
+   /* function sectionIn() {
+
+    }*/
 
 
 
@@ -113,47 +117,47 @@ $(document).ready(function() {
     categorie.hover(hoverSectionEnter, hoverSectionLeave);
 
     function hoverSectionEnter () {
-        if($(this).hasClass("about")) {
+        if($(this).hasClass("about-title")) {
             $(this).addClass('hover');
-            $('.work').addClass('hover');
+            $('.work-title').addClass('hover');
         }
 
-         if($(this).hasClass("work")) {
+         if($(this).hasClass("work-title")) {
             $(this).addClass('hover');
-            $('.contact').addClass('hover');
+            $('.contact-title').addClass('hover');
         }
 
-         if($(this).hasClass("skill")) {
+         if($(this).hasClass("skill-title")) {
             $(this).addClass('hover');
-            $('.about').addClass('hover');
+            $('.about-title').addClass('hover');
         }
 
-         if($(this).hasClass("contact")) {
+         if($(this).hasClass("contact-title")) {
             $(this).addClass('hover');
-            $('.skill').addClass('hover');
+            $('.skill-title').addClass('hover');
         }
 
     }
 
     function hoverSectionLeave () {
-        if($(this).hasClass("about")) {
+        if($(this).hasClass("about-title")) {
             $(this).removeClass('hover');
-            $('.work').removeClass('hover');
+            $('.work-title').removeClass('hover');
         }
 
-        if($(this).hasClass("work")) {
+        if($(this).hasClass("work-title")) {
             $(this).removeClass('hover');
-            $('.contact').removeClass('hover');
+            $('.contact-title').removeClass('hover');
         }
 
-        if($(this).hasClass("skill")) {
+        if($(this).hasClass("skill-title")) {
             $(this).removeClass('hover');
-            $('.about').removeClass('hover');
+            $('.about-title').removeClass('hover');
         }
 
-        if($(this).hasClass("contact")) {
+        if($(this).hasClass("contact-title")) {
             $(this).removeClass('hover');
-            $('.skill').removeClass('hover');
+            $('.skill-title').removeClass('hover');
         }
 
     }
@@ -180,13 +184,19 @@ $(document).ready(function() {
         $("meta[name='theme-color']").attr("content", color);
 
 
+        //Cache les catégories
         categoryOut();
+
+        //Affiche contenu section
+        section.next().css("display", "flex");
+
+
 
 
         //On affiche le bouton close
         setTimeout(function(){
             $(".section-close").fadeIn("slow");
-        },1200);
+        },1800);
 
 
 
@@ -241,7 +251,15 @@ $(document).ready(function() {
         $("meta[name='theme-color']").attr("content", "");
 
 
-        categoryIn();
+        //Cache les contenus
+        $("[id$=\"-content\"]").fadeOut(300);
+
+
+        //Afiche les catégories
+        setTimeout(function () {
+            categoryIn();
+        }, 800);
+
 
 /*
         //Mettre opacité 0
@@ -453,7 +471,7 @@ $(document).ready(function() {
 
     function hideWork() {
 
-        var color = $(".work").css("background-color");
+        var color = $(".work-title").css("background-color");
         $("meta[name='theme-color']").attr("content", color);
 
 //                body.css('overflow', 'hidden');
@@ -476,7 +494,7 @@ $(document).ready(function() {
      * *****************************/
 
 
-    $('.skill').on("click", skillBar);
+    $('.skill-title').on("click", skillBar);
 
 
     function skillBar() {

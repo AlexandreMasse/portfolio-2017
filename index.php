@@ -36,9 +36,9 @@
 
     <main>
 
-        <!-- INTRO -->
+        <!----- INTRO ----->
 
-        <div class="intro">
+        <section class="intro">
 
             <div class="intro-me">
                 <p>Alexandre Massé</p>
@@ -56,246 +56,248 @@
                 <p>Creative developer</p>
             </div>
 
-        </div>
+        </section>
 
 
-        <!-- NAVIGATION -->
+        <!----- NAVIGATION ----->
 
+        <!-- Bouton home -->
         <div class="nav-home"><!--<span class="flaticon-home-01"></span>--></div>
 
-
-        <!--Todo : animation croix avec span-->
-
+        <!-- Bouton close -->
         <div class="section-close"><span></span></div>
 
 
 
-        <!-- SECTION : ABOUT -->
+        <!----- SECTION : ABOUT ----->
 
-        <section class="cat about">
+        <section class="cat about-title">
 
-            <div class="section-title">Qui suis-je ?</div>
+            <h1>Qui suis-je ?</h1>
 
-            <div class="section-container">
+        </section>
 
-                <picture class="photo-me">
-                    <source media="(min-width: 600px)" srcset="img/me-l.jpg">
-                    <source media="(min-width: 400px)" srcset="img/me-m.jpg">
-                    <img src="img/me-s.jpg" alt="">
-                </picture>
+        <section id="about-content" class="section-container">
 
-                <h1>Alexandre Massé</h1>
+            <picture class="photo-me">
+                <source media="(min-width: 250px)" srcset="img/me1.jpg 1x, img/me2.jpg 2x">
+                <img src="img/me2.jpg" alt="">
+            </picture>
 
-                <h2>Creative developer</h2>
+            <h1>Alexandre Massé</h1>
 
-                <p>Je suis actuellement étudiant en deuxième année du DUT "Métiers du multimédia et de l'internet" à Champs-sur-Marne. Cela va faire 2 ans que j'ai découvert le monde du développement web. En ces deux années j'ai su acquérir un certain nombres de connaissances concernant le développement web, mais plus que de la connaissance, j'ai découvert également du plaisir, le plaisir de coder ! C'est la raison pour laquelle je souhaite aujourd'hui devenir developpeur.</p>
-                <p>Quand bien même je fais preuve d'un grand attrait pour le développement, je suis quelqu'un de très ouvert et curieux qui adore apprendre sans cesse de nouvelles choses. Cette curiosité se travaille tous les jours et nottament grâce à ma passion qui est la photograhie.</p>
+            <h2>Creative developer</h2>
 
-                <div class="dl">
-                    <a href="doc/alexandre-masse-cv.pdf" class="dl-cv" target="_blank">Mon CV</a>
-                    <a href="doc/alexandre-masse-book.pdf" class="dl-book" target="_blank">Mon Book</a>
-                </div>
+            <p>Étant accepté aux Gobelins en Bachelor « Designer & Développeur Interactif » avec l'option développement, je suis à la recherche d’une alternance en développement front à partir de septembre 2017.</p>
+
+            <p>Très curieux et motivé je suis sans cesse à la recherche de nouvelles choses à apprendre et à explorer. L'exploration et l'innovation sont d’ailleurs deux aspects que je cherche à retranscrire dans mon travail, ce qui fait que je suis si attaché à “l’esprit startup” et que je n'hésite jamais à relever les challenges !</p>
+
+            <p>À la base passionné par la photographie, j’ai développé au cours des années une sensibilité artistique qui m’a permis de réaliser que je n’appréciais pas seulement coder dans le simple but de coder mais de le faire afin de raconter des choses et transmettre des émotions. Me tiennent donc à coeur à la fois un code fonctionnel mais surtout un code qui a et fait du sens.</p>
+
+            <div class="dl">
+                <a href="doc/alexandre-masse-cv.pdf" class="dl-cv" target="_blank">Mon CV</a>
+                <a href="doc/alexandre-masse-book.pdf" class="dl-book" target="_blank">Mon Book</a>
+            </div>
 
 
-                <h3>Rejoins moi sur mes différents réseaux sociaux !</h3>
+            <h3>Rejoins moi sur mes différents réseaux sociaux !</h3>
 
-                <div class="social">
-                    <a href="https://github.com/AlexandreMasse" title="Mon Github">
-                        <span class="flaticon-social-github"></span>
-                    </a>
+            <div class="social">
+                <a href="https://github.com/AlexandreMasse" title="Mon Github">
+                    <span class="flaticon-social-github"></span>
+                </a>
 
-                    <a href="https://twitter.com/Alexandre_Masse" title="Mon Twitter">
-                        <span class="flaticon-social-twitter-01"></span>
-                    </a>
+                <a href="https://twitter.com/Alexandre_Masse" title="Mon Twitter">
+                    <span class="flaticon-social-twitter-01"></span>
+                </a>
 
-                    <a href="https://www.flickr.com/photos/alexandre_masse/" title="Mon Flickr">
-                        <span class="flaticon-social-flickr"></span>
-                    </a>
+                <a href="https://www.flickr.com/photos/alexandre_masse/" title="Mon Flickr">
+                    <span class="flaticon-social-flickr"></span>
+                </a>
 
-                    <a href="https://fr.linkedin.com/in/alexandremasse" title="Mon LinkdIn">
-                        <span class="flaticon-social-linkedin"></span>
-                    </a>
-                </div>
+                <a href="https://fr.linkedin.com/in/alexandremasse" title="Mon LinkdIn">
+                    <span class="flaticon-social-linkedin"></span>
+                </a>
             </div>
         </section>
 
 
-        <!-- SECTION : WORK -->
+        <!----- SECTION : WORK ----->
 
-        <section class="cat work">
+        <section class="cat work-title">
 
-            <div class="section-title ">Projets</div>
+            <h1>Projets</h1>
 
-            <div class="section-container">
+        </section>
 
-                <h1>Mes projets</h1>
+        <section id="work-content" class="section-container">
 
-                <div class="work-img">
+            <h1>Mes projets</h1>
 
-                    <div class="work-item">
-                        <figure class="work-img-hover">
-                            <img src="img/projet-tutotoformes-1x.png" alt=""
-                            srcset="img/projet-tutotoformes-2x.png 2x"/>
-                            <figcaption>
-                                <h3>Tutotoformes</h3>
-                                <h5>Plateforme d'autoformation en ligne sur les métiers de web</h5>
-                            </figcaption>
-                            <div data-position="0"></div>
-                        </figure>
-                    </div>
+            <div class="work-img">
+
+                <div class="work-item">
+                    <figure class="work-img-hover">
+                        <img src="img/projet-tutotoformes-1x.png" alt=""
+                             srcset="img/projet-tutotoformes-2x.png 2x"/>
+                        <figcaption>
+                            <h3>Tutotoformes</h3>
+                            <h5>Plateforme d'autoformation en ligne sur les métiers de web</h5>
+                        </figcaption>
+                        <div data-position="0"></div>
+                    </figure>
+                </div>
 
 
-                    <div class="work-item">
-                        <figure class="work-img-hover">
-                            <img src="img/projet-plateforme-mmi-1x.png" alt=""
-                            srcset="img/projet-plateforme-mmi-2x.png 2x,
+                <div class="work-item">
+                    <figure class="work-img-hover">
+                        <img src="img/projet-plateforme-mmi-1x.png" alt=""
+                             srcset="img/projet-plateforme-mmi-2x.png 2x,
                                     img/projet-plateforme-mmi-3x.png 3x"/>
-                            <figcaption>
-                                <h3>Plateforme MMI</h3>
-                                <h5>Plateforme de mise en relation des étudiants du DUT MMI avec les entreprises</h5>
-                            </figcaption>
-                            <div data-position="1"></div>
-                        </figure>
-                    </div>
+                        <figcaption>
+                            <h3>Plateforme MMI</h3>
+                            <h5>Plateforme de mise en relation des étudiants du DUT MMI avec les entreprises</h5>
+                        </figcaption>
+                        <div data-position="1"></div>
+                    </figure>
+                </div>
 
 
-                    <div class="work-item">
-                        <figure class="work-img-hover">
-                            <img src="img/projet-cv-interactif-1x.png" alt=""
-                            srcset="img/projet-cv-interactif-2x.png 2x,
+                <div class="work-item">
+                    <figure class="work-img-hover">
+                        <img src="img/projet-cv-interactif-1x.png" alt=""
+                             srcset="img/projet-cv-interactif-2x.png 2x,
                                     img/projet-cv-interactif-3x.png 3x"/>
-                            <figcaption>
-                                <h3>CV interactif</h3>
-                                <h5>Mon CV en ligne et interactif</h5>
-                            </figcaption>
-                            <div data-position="2"></div>
-                        </figure>
-                    </div>
+                        <figcaption>
+                            <h3>CV interactif</h3>
+                            <h5>Mon CV en ligne et interactif</h5>
+                        </figcaption>
+                        <div data-position="2"></div>
+                    </figure>
+                </div>
 
 
-                    <div class="work-item">
-                        <figure class="work-img-hover">
-                            <img src="img/projet-portrait-chinois-1x.png" alt=""
-                            srcset="img/projet-portrait-chinois-2x.png 2x,
+                <div class="work-item">
+                    <figure class="work-img-hover">
+                        <img src="img/projet-portrait-chinois-1x.png" alt=""
+                             srcset="img/projet-portrait-chinois-2x.png 2x,
                                     img/projet-portrait-chinois-3x.png 3x"/>
-                            <figcaption>
-                                <h3>Portrait chinois</h3>
-                                <h5>Site web permettant de me présenter originalement </h5>
-                            </figcaption>
-                            <div data-position="3"></div>
-                        </figure>
-                    </div>
+                        <figcaption>
+                            <h3>Portrait chinois</h3>
+                            <h5>Site web permettant de me présenter originalement </h5>
+                        </figcaption>
+                        <div data-position="3"></div>
+                    </figure>
+                </div>
 
 
-                    <div class="work-item">
-                        <figure class="work-img-hover">
-                            <img src="img/projet-reflexephoto-1x.png" alt=""
-                            srcset="img/projet-reflexephoto-2x.png 2x,
+                <div class="work-item">
+                    <figure class="work-img-hover">
+                        <img src="img/projet-reflexephoto-1x.png" alt=""
+                             srcset="img/projet-reflexephoto-2x.png 2x,
                                     img/projet-reflexephoto-3x.png 3x"/>
-                            <figcaption>
-                                <h3>Rapport de Stage</h3>
-                                <h5>Rapport de stage graphique réalisé suite à mon stage de webmaster chez Reflexephoto</h5>
-                            </figcaption>
-                            <div data-position="4"></div>
-                        </figure>
-                    </div>
-
+                        <figcaption>
+                            <h3>Rapport de Stage</h3>
+                            <h5>Rapport de stage graphique réalisé suite à mon stage de webmaster chez Reflexephoto</h5>
+                        </figcaption>
+                        <div data-position="4"></div>
+                    </figure>
                 </div>
-
-
-
-
-                <div class="workview">
-
-                    <!--Tutotoformes-->
-                    <div>
-                        <img src="img/projet-tutotoformes-2x.png" alt="">
-
-                        <h2>Tutotoformes</h2>
-
-                        <p>Tutotoformes est une plateforme réalisée dans le cadre du projet tutoré de deuxième année du DUT MMI. Cette plateforme a pour vocation de mettre à disposition des supports pédagogiques afin d'apprendre diverses technologies. Tout cela en laissant à chacun la possibilité de proposer ses propres supports pédagogiques et les mettre à disposition de la comunauté.</p>
-
-                        <a class="work-link" href="http://tutotoformes.fr/">
-                            <p>Voir le projet</p>
-                        </a>
-
-                        <div class="nav-work-close"><span class="flaticon-cross-02"></span></div>
-                    </div>
-
-
-                    <!--Plateforme MMI-->
-                    <div>
-
-                        <img src="img/projet-plateforme-mmi-2x.png" alt="">
-
-                        <h2>Plateforme MMI</h2>
-
-                        <p>Plateforme réalisée dans le cadre du projet tutoré de première année du DUT MMI. Cette plateforme a pour but de présenter les étudiants du DUT MMI aux entreprisdes afin qu'ils puissent être mis en relation pour obtenir un stage.</p>
-
-                        <a class="work-link" href="http://erwann-letue.fr/host/plateforme-mmi/">
-                            <p>Voir le projet</p>
-                        </a>
-
-                        <div class="nav-work-close"><span class="flaticon-cross-02"></span></div>
-                    </div>
-
-
-                    <!--CV interactif-->
-                    <div>
-
-                        <img src="img/projet-cv-interactif-2x.png" alt="">
-
-                        <h2>CV interactif</h2>
-
-                        <p>Un CV numérique c'est bien, mais un CV interactif c'est mieux ! Ce CV me présente de manière ludique et originale. Ce fut mon premier projet réalisé à l'aide de Javascript et jQuery.</p>
-
-                        <a class="work-link" href="http://alexandremasse.fr/cv-interactif/index.html">
-                            <p>Voir le projet</p>
-                        </a>
-
-                        <div class="nav-work-close"><span class="flaticon-cross-02"></span></div>
-                    </div>
-
-
-
-                    <!-- Portrait chinois -->
-                    <div>
-
-                        <img src="img/projet-portrait-chinois-2x.png" alt="">
-
-                        <h2>Portrait Chinois</h2>
-
-                        <p>Site web à travers lequel je me decris. Ce fut le premier vrai site que j'ai réalisé entièrement de mes propres mains à l'aide du HTML et CSS</p>
-
-                        <a class="work-link" href="http://alexandremasse.fr/portrait-chinois/">
-                            <p>Voir le projet</p>
-                        </a>
-
-                        <div class="nav-work-close"><span class="flaticon-cross-02"></span></div>
-                    </div>
-
-
-
-                    <!-- Reflexephoto -->
-                    <div>
-
-                        <img src="img/projet-reflexephoto-2x.png" alt="">
-
-                        <h2>Rapport de stage - Reflexephoto</h2>
-
-                        <p>Rapport de stage realisé suite à mon stage en première année du DUT "Métiers du multimédia et de l'internet" chez Reflexephoto en tant que webmaster. Ce fut mon tout premier dossier grahique realisé entièrement sur Indesign</p>
-
-                        <a class="work-link" href="http://alexandremasse.fr/share/doc/rapport-de-stage-reflexephoto.pdf">
-                            <p>Voir le projet</p>
-                        </a>
-
-                        <div class="nav-work-close"><span class="flaticon-cross-02"></span></div>
-                    </div>
-
-                </div>
-
 
             </div>
+
+
+
+
+            <div class="workview">
+
+                <!--Tutotoformes-->
+                <div>
+                    <img src="img/projet-tutotoformes-2x.png" alt="">
+
+                    <h2>Tutotoformes</h2>
+
+                    <p>Tutotoformes est une plateforme réalisée dans le cadre du projet tutoré de deuxième année du DUT MMI. Cette plateforme a pour vocation de mettre à disposition des supports pédagogiques afin d'apprendre diverses technologies. Tout cela en laissant à chacun la possibilité de proposer ses propres supports pédagogiques et les mettre à disposition de la comunauté.</p>
+
+                    <a class="work-link" href="http://tutotoformes.fr/">
+                        <p>Voir le projet</p>
+                    </a>
+
+                    <div class="nav-work-close"><span class="flaticon-cross-02"></span></div>
+                </div>
+
+
+                <!--Plateforme MMI-->
+                <div>
+
+                    <img src="img/projet-plateforme-mmi-2x.png" alt="">
+
+                    <h2>Plateforme MMI</h2>
+
+                    <p>Plateforme réalisée dans le cadre du projet tutoré de première année du DUT MMI. Cette plateforme a pour but de présenter les étudiants du DUT MMI aux entreprisdes afin qu'ils puissent être mis en relation pour obtenir un stage.</p>
+
+                    <a class="work-link" href="http://erwann-letue.fr/host/plateforme-mmi/">
+                        <p>Voir le projet</p>
+                    </a>
+
+                    <div class="nav-work-close"><span class="flaticon-cross-02"></span></div>
+                </div>
+
+
+                <!--CV interactif-->
+                <div>
+
+                    <img src="img/projet-cv-interactif-2x.png" alt="">
+
+                    <h2>CV interactif</h2>
+
+                    <p>Un CV numérique c'est bien, mais un CV interactif c'est mieux ! Ce CV me présente de manière ludique et originale. Ce fut mon premier projet réalisé à l'aide de Javascript et jQuery.</p>
+
+                    <a class="work-link" href="http://alexandremasse.fr/cv-interactif/index.html">
+                        <p>Voir le projet</p>
+                    </a>
+
+                    <div class="nav-work-close"><span class="flaticon-cross-02"></span></div>
+                </div>
+
+
+
+                <!-- Portrait chinois -->
+                <div>
+
+                    <img src="img/projet-portrait-chinois-2x.png" alt="">
+
+                    <h2>Portrait Chinois</h2>
+
+                    <p>Site web à travers lequel je me decris. Ce fut le premier vrai site que j'ai réalisé entièrement de mes propres mains à l'aide du HTML et CSS</p>
+
+                    <a class="work-link" href="http://alexandremasse.fr/portrait-chinois/">
+                        <p>Voir le projet</p>
+                    </a>
+
+                    <div class="nav-work-close"><span class="flaticon-cross-02"></span></div>
+                </div>
+
+
+
+                <!-- Reflexephoto -->
+                <div>
+
+                    <img src="img/projet-reflexephoto-2x.png" alt="">
+
+                    <h2>Rapport de stage - Reflexephoto</h2>
+
+                    <p>Rapport de stage realisé suite à mon stage en première année du DUT "Métiers du multimédia et de l'internet" chez Reflexephoto en tant que webmaster. Ce fut mon tout premier dossier grahique realisé entièrement sur Indesign</p>
+
+                    <a class="work-link" href="http://alexandremasse.fr/share/doc/rapport-de-stage-reflexephoto.pdf">
+                        <p>Voir le projet</p>
+                    </a>
+
+                    <div class="nav-work-close"><span class="flaticon-cross-02"></span></div>
+                </div>
+
+            </div>
+
 
         </section>
 
@@ -303,208 +305,206 @@
 
 
 
+        <!----- SECTION : SKILL ----->
+
+        <section class="cat skill-title">
+
+            <h1>Compétences</h1>
+
+        </section>
+
+        <section id="skill-content" class="section-container">
+
+            <h2>Mes compétences...</h2>
 
 
-        <!-- SECTION : SKILL -->
-
-        <section class="cat skill">
-
-            <div class="section-title">Compétences</div>
-
-            <div class="section-container">
-
-                <h2>Mes compétences...</h2>
-
-
-                <div class="skill-container">
+            <div class="skill-container">
 
                 <h3>...en développement</h3>
 
-                    <div class="bar-html skill-dev">
-                        <div class="skill-title">HTML5</div>
-                        <div class="bar" data-width="100%">
-                            <div class="bar-inner"></div>
-                            <div class="bar-percent">100%</div>
-                        </div>
+                <div class="bar-html skill-dev">
+                    <div class="skill-title">HTML5</div>
+                    <div class="bar" data-width="100%">
+                        <div class="bar-inner"></div>
+                        <div class="bar-percent">100%</div>
                     </div>
+                </div>
 
 
-                    <div class="bar-css skill-dev">
-                        <div class="skill-title">CSS3</div>
-                        <div class="bar" data-width="85%">
-                            <div class="bar-inner"></div>
-                            <div class="bar-percent">85%</div>
-                        </div>
+                <div class="bar-css skill-dev">
+                    <div class="skill-title">CSS3</div>
+                    <div class="bar" data-width="85%">
+                        <div class="bar-inner"></div>
+                        <div class="bar-percent">85%</div>
                     </div>
+                </div>
 
 
-                    <div class="bar-javascript skill-dev">
-                        <div class="skill-title">JavaScript / jQuery </div>
-                        <div class="bar" data-width="75%">
-                            <div class="bar-inner"></div>
-                            <div class="bar-percent">75%</div>
-                        </div>
+                <div class="bar-javascript skill-dev">
+                    <div class="skill-title">JavaScript / jQuery </div>
+                    <div class="bar" data-width="75%">
+                        <div class="bar-inner"></div>
+                        <div class="bar-percent">75%</div>
                     </div>
+                </div>
 
 
-                    <div class="bar-php skill-dev">
-                        <div class="skill-title">PHP</div>
-                        <div class="bar" data-width="65%">
-                            <div class="bar-inner"></div>
-                            <div class="bar-percent">65%</div>
-                        </div>
+                <div class="bar-php skill-dev">
+                    <div class="skill-title">PHP</div>
+                    <div class="bar" data-width="65%">
+                        <div class="bar-inner"></div>
+                        <div class="bar-percent">65%</div>
                     </div>
+                </div>
 
 
-                    <div class="bar-git skill-dev">
-                        <div class="skill-title">SQL</div>
-                        <div class="bar" data-width="60%">
-                            <div class="bar-inner"></div>
-                            <div class="bar-percent">60%</div>
-                        </div>
+                <div class="bar-git skill-dev">
+                    <div class="skill-title">SQL</div>
+                    <div class="bar" data-width="60%">
+                        <div class="bar-inner"></div>
+                        <div class="bar-percent">60%</div>
                     </div>
+                </div>
 
-                    <div class="bar-symfony skill-dev">
-                        <div class="skill-title">Symfony</div>
-                        <div class="bar" data-width="50%">
-                            <div class="bar-inner"></div>
-                            <div class="bar-percent">50%</div>
-                        </div>
+                <div class="bar-symfony skill-dev">
+                    <div class="skill-title">Symfony</div>
+                    <div class="bar" data-width="50%">
+                        <div class="bar-inner"></div>
+                        <div class="bar-percent">50%</div>
                     </div>
+                </div>
 
 
-                    <h3>....en graphisme</h3>
+                <h3>....en graphisme</h3>
 
-                    <div class="bar-photoshop skill-graph">
-                        <div class="skill-title">Photosphop</div>
-                        <div class="bar" data-width="80%">
-                            <div class="bar-inner"></div>
-                            <div class="bar-percent">80%</div>
-                        </div>
+                <div class="bar-photoshop skill-graph">
+                    <div class="skill-title">Photosphop</div>
+                    <div class="bar" data-width="80%">
+                        <div class="bar-inner"></div>
+                        <div class="bar-percent">80%</div>
                     </div>
+                </div>
 
-                    <div class="bar-illustrator skill-graph">
-                        <div class="skill-title">Illustrator</div>
-                        <div class="bar" data-width="70%">
-                            <div class="bar-inner"></div>
-                            <div class="bar-percent">70%</div>
-                        </div>
+                <div class="bar-illustrator skill-graph">
+                    <div class="skill-title">Illustrator</div>
+                    <div class="bar" data-width="70%">
+                        <div class="bar-inner"></div>
+                        <div class="bar-percent">70%</div>
                     </div>
+                </div>
 
 
-                    <div class="bar-indesign skill-graph">
-                        <div class="skill-title">InDesign</div>
-                        <div class="bar" data-width="65%">
-                            <div class="bar-inner"></div>
-                            <div class="bar-percent">65%</div>
-                        </div>
+                <div class="bar-indesign skill-graph">
+                    <div class="skill-title">InDesign</div>
+                    <div class="bar" data-width="65%">
+                        <div class="bar-inner"></div>
+                        <div class="bar-percent">65%</div>
                     </div>
+                </div>
 
 
 
-                    <h3>....en audiovisuel</h3>
+                <h3>....en audiovisuel</h3>
 
 
-                    <div class="bar-premiere skill-audio">
-                        <div class="skill-title">Première Pro</div>
-                        <div class="bar" data-width="70%">
-                            <div class="bar-inner"></div>
-                            <div class="bar-percent">70%</div>
-                        </div>
+                <div class="bar-premiere skill-audio">
+                    <div class="skill-title">Première Pro</div>
+                    <div class="bar" data-width="70%">
+                        <div class="bar-inner"></div>
+                        <div class="bar-percent">70%</div>
                     </div>
+                </div>
 
 
-                    <div class="bar-after skill-audio">
-                        <div class="skill-title">After Effect</div>
-                        <div class="bar" data-width="50%">
-                            <div class="bar-inner"></div>
-                            <div class="bar-percent">50%</div>
-                        </div>
+                <div class="bar-after skill-audio">
+                    <div class="skill-title">After Effect</div>
+                    <div class="bar" data-width="50%">
+                        <div class="bar-inner"></div>
+                        <div class="bar-percent">50%</div>
                     </div>
+                </div>
 
 
-                    <h3>....en photographie</h3>
+                <h3>....en photographie</h3>
 
 
-                    <div class="bar-portrait skill-photo">
-                        <div class="skill-title">Portrait</div>
-                        <div class="bar" data-width="90%">
-                            <div class="bar-inner"></div>
-                            <div class="bar-percent">90%</div>
-                        </div>
+                <div class="bar-portrait skill-photo">
+                    <div class="skill-title">Portrait</div>
+                    <div class="bar" data-width="90%">
+                        <div class="bar-inner"></div>
+                        <div class="bar-percent">90%</div>
                     </div>
+                </div>
 
 
-                    <div class="bar-nb skill-photo">
-                        <div class="skill-title">Noir & blanc</div>
-                        <div class="bar" data-width="80%">
-                            <div class="bar-inner"></div>
-                            <div class="bar-percent">80%</div>
-                        </div>
+                <div class="bar-nb skill-photo">
+                    <div class="skill-title">Noir & blanc</div>
+                    <div class="bar" data-width="80%">
+                        <div class="bar-inner"></div>
+                        <div class="bar-percent">80%</div>
                     </div>
+                </div>
 
 
-                    <div class="bar-nuit skill-photo">
-                        <div class="skill-title">De nuit / Light Painting</div>
-                        <div class="bar" data-width="70%">
-                            <div class="bar-inner"></div>
-                            <div class="bar-percent">70%</div>
-                        </div>
+                <div class="bar-nuit skill-photo">
+                    <div class="skill-title">De nuit / Light Painting</div>
+                    <div class="bar" data-width="70%">
+                        <div class="bar-inner"></div>
+                        <div class="bar-percent">70%</div>
                     </div>
+                </div>
 
-                    <div class="bar-paysage skill-photo">
-                        <div class="skill-title">Paysage / Panorama</div>
-                        <div class="bar" data-width="65%">
-                            <div class="bar-inner"></div>
-                            <div class="bar-percent">65%</div>
-                        </div>
+                <div class="bar-paysage skill-photo">
+                    <div class="skill-title">Paysage / Panorama</div>
+                    <div class="bar" data-width="65%">
+                        <div class="bar-inner"></div>
+                        <div class="bar-percent">65%</div>
                     </div>
+                </div>
 
 
-                    <div class="bar-archi skill-photo">
-                        <div class="skill-title">Architecture</div>
-                        <div class="bar" data-width="50%">
-                            <div class="bar-inner"></div>
-                            <div class="bar-percent">50%</div>
-                        </div>
+                <div class="bar-archi skill-photo">
+                    <div class="skill-title">Architecture</div>
+                    <div class="bar" data-width="50%">
+                        <div class="bar-inner"></div>
+                        <div class="bar-percent">50%</div>
                     </div>
                 </div>
             </div>
         </section>
 
 
+        <!----- SECTION : CONTACT ----->
 
-        <!-- SECTION : CONTACT -->
+        <section class="cat contact-title">
 
-        <section class="cat contact">
+            <h1>Contact</h1>
 
-            <div class="section-title">Contact</div>
+        </section>
 
-            <div class="section-container">
+        <section id="contact-content" class="section-container">
 
-                <h2>Contact</h2>
+            <h2>Contact</h2>
 
-                <p>Envoyez moi un petit message !</p>
-                <form class="" action="index.php" method="post">
+            <p>Envoyez moi un petit message !</p>
+            <form class="" action="index.php" method="post">
 
-                    <input type="text" name="nom" placeholder="Nom" required>
+                <input type="text" name="nom" placeholder="Nom" required>
 
-                    <input type="text" name="prenom" placeholder="Prénom" required>
+                <input type="text" name="prenom" placeholder="Prénom" required>
 
-                    <input type="email" name="email" placeholder="Adresse e-mail" required>
+                <input type="email" name="email" placeholder="Adresse e-mail" required>
 
-                    <input type="text" name="sujet" placeholder="Sujet" required>
+                <input type="text" name="sujet" placeholder="Sujet" required>
 
-                    <textarea name="message" rows="5" cols="60" placeholder="Votre message" required=></textarea>
+                <textarea name="message" rows="5" cols="60" placeholder="Votre message" required=></textarea>
 
-                    <?php
-                    include 'php/send.php';
-                    ?>
+                <?php
+                include 'php/send.php';
+                ?>
 
-                    <input type="submit" name="" value="Envoyer">
-                </form>
-            </div>
-
+                <input type="submit" name="" value="Envoyer">
+            </form>
         </section>
     </main>
 
