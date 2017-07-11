@@ -80,7 +80,7 @@
         <section id="about-content" class="section-container">
 
             <div id="about-content-title">
-                <p>Qui suis-je ? </p>
+                <h1>Qui suis-je ? </h1>
                 <hr>
             </div>
 
@@ -90,9 +90,9 @@
                 <img src="img/me2.jpg" alt="Moi">
             </picture>
 
-            <h1>Alexandre Massé</h1>
+            <h2 id="about-content-name">Alexandre Massé</h2>
 
-            <h2>Creative developer</h2>
+            <h3 id="about-content-job">Creative developer</h3>
 
             <p>Étant accepté aux <strong>Gobelins</strong> en Bachelor « Designer & Développeur Interactif » avec l'option développement, je suis à la <strong>recherche d’une alternance</strong> en développement front à partir de septembre 2017.</p>
 
@@ -106,7 +106,7 @@
             </div>
 
 
-            <h3>Rejoins moi sur mes différents réseaux sociaux !</h3>
+            <h4 id="about-content-joinme">Rejoins moi sur mes différents réseaux sociaux !</h4>
 
             <div class="social">
                 <a href="https://github.com/AlexandreMasse" title="Mon Github" target="_blank">
@@ -321,12 +321,18 @@
 
         <section id="skill-content" class="section-container">
 
-            <h2>Mes compétences...</h2>
+            <div id="skill-content-title">
+                <h1>Mes compétences...</h1>
+                <hr>
+            </div>
+
+
+           <!-- <h2>Mes compétences...</h2>-->
 
 
             <div class="skill-container">
 
-                <h3>...en développement</h3>
+                <h2>...en développement</h2>
 
                 <div class="bar-html skill-dev">
                     <div class="skill-title">HTML5</div>
@@ -381,7 +387,7 @@
                 </div>
 
 
-                <h3>....en graphisme</h3>
+                <h2>....en graphisme</h2>
 
                 <div class="bar-photoshop skill-graph">
                     <div class="skill-title">Photosphop</div>
@@ -410,7 +416,7 @@
 
 
 
-                <h3>....en audiovisuel</h3>
+                <h2>....en audiovisuel</h2>
 
 
                 <div class="bar-premiere skill-audio">
@@ -431,7 +437,7 @@
                 </div>
 
 
-                <h3>....en photographie</h3>
+                <h2>....en photographie</h2>
 
 
                 <div class="bar-portrait skill-photo">

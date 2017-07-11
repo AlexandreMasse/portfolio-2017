@@ -255,10 +255,10 @@ $(document).ready(function() {
         $("[id$=\"-content\"]").fadeOut(300);
 
 
-        //Afiche les catégories
+        //Affiche les catégories
         setTimeout(function () {
             categoryIn();
-        }, 300);
+        }, 500);
 
 
 /*
