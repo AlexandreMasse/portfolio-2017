@@ -499,11 +499,14 @@ $(document).ready(function() {
 
     function skillBar() {
         //Remplir chaque bar
-        $(".bar").each(function(){
-            $(this).find(".bar-inner").animate({
-                "width" : $(this).attr("data-width")
-            },4000)
-        });
+        setTimeout(function () {
+            $(".bar").each(function(){
+                $(this).find(".bar-inner").animate({
+                    "width" : $(this).attr("data-width")
+                },4000)
+            });
+        }, 1500);
+
 
     }
 

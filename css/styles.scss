@@ -137,6 +137,12 @@ NAVIGATION
 
     //animation: bouton-close 2s;
 
+
+    @media screen and (max-width: $media350) {
+        width: 9rem;
+        height: 9rem;
+    }
+
     transition: transform 1s ease;
 
 
@@ -1400,6 +1406,13 @@ $about-function : ease;
 SKILL
 *****************************************/
 
+
+$skill-delay : 1.5s;
+$skill-duration : 1.8s;
+$skill-interval : 170ms;
+$skill-function : ease;
+
+
 #skill-content {
     align-items: center;
     flex-direction: column;
@@ -1415,7 +1428,10 @@ SKILL
         margin: 10px 0;
     }*/
 
+
+
     .skill-container {
+        opacity: 0;
         margin-top: 1rem;
         width: 70%;
         background-color: inherit;
@@ -1427,15 +1443,16 @@ SKILL
         flex-direction: column;
         align-items: center;
 
+        animation: fadeIn $skill-duration $skill-delay+$skill-interval*0 $skill-function forwards;
+
         @media screen and (max-width: $media900) {
             width: 65%;
         }
 
-
-        @media screen and (max-width: $media500) {
-            width: 60%;
+        /*@media screen and (max-width: $media350) {
+            width: 6%;
         }
-
+*/
 
         h2 {
             font-size: 3.5rem;
@@ -1457,6 +1474,15 @@ SKILL
             font-weight: 300;
             font-size: 2.5rem;
             margin-bottom: 0.8rem;
+
+            span {
+                font-weight: 300;
+                font-size: 2rem;
+                @media screen and (max-width: $media500) {
+                    //font-size: 2.2rem;
+                }
+            }
+
 
         }
 

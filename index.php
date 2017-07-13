@@ -335,19 +335,10 @@
                 <h2>...en développement</h2>
 
                 <div class="bar-html skill-dev">
-                    <div class="skill-title">HTML5</div>
-                    <div class="bar" data-width="100%">
+                    <div class="skill-title">HTML5 / CSS3</div>
+                    <div class="bar" data-width="95%">
                         <div class="bar-inner"></div>
-                        <div class="bar-percent">100%</div>
-                    </div>
-                </div>
-
-
-                <div class="bar-css skill-dev">
-                    <div class="skill-title">CSS3</div>
-                    <div class="bar" data-width="85%">
-                        <div class="bar-inner"></div>
-                        <div class="bar-percent">85%</div>
+                        <div class="bar-percent">95%</div>
                     </div>
                 </div>
 
@@ -362,7 +353,7 @@
 
 
                 <div class="bar-php skill-dev">
-                    <div class="skill-title">PHP</div>
+                    <div class="skill-title">PHP / SQL</div>
                     <div class="bar" data-width="65%">
                         <div class="bar-inner"></div>
                         <div class="bar-percent">65%</div>
@@ -371,12 +362,13 @@
 
 
                 <div class="bar-git skill-dev">
-                    <div class="skill-title">SQL</div>
-                    <div class="bar" data-width="60%">
+                    <div class="skill-title">Git / GitHub</div>
+                    <div class="bar" data-width="75%">
                         <div class="bar-inner"></div>
-                        <div class="bar-percent">60%</div>
+                        <div class="bar-percent">75%</div>
                     </div>
                 </div>
+
 
                 <div class="bar-symfony skill-dev">
                     <div class="skill-title">Symfony</div>
@@ -387,30 +379,66 @@
                 </div>
 
 
+                <div class="bar-angular skill-dev">
+                    <div class="skill-title">AngularJS <span>(en cours d'apprentissage)</span></div>
+                    <div class="bar" data-width="20%">
+                        <div class="bar-inner"></div>
+                        <div class="bar-percent">20%</div>
+                    </div>
+                </div>
+
+                <div class="bar-react skill-dev">
+                    <div class="skill-title">ReactJS <span>(en cours d'apprentissage)</span></div>
+                    <div class="bar" data-width="20%">
+                        <div class="bar-inner"></div>
+                        <div class="bar-percent">20%</div>
+                    </div>
+                </div>
+
+
+                <div class="bar-vue skill-dev">
+                    <div class="skill-title">VueJS <span>(en cours d'apprentissage)</span></div>
+                    <div class="bar" data-width="15%">
+                        <div class="bar-inner"></div>
+                        <div class="bar-percent">15%</div>
+                    </div>
+                </div>
+
+
+                <div class="bar-three skill-dev">
+                    <div class="skill-title">ThreeJS <span>(en cours d'apprentissage)</span></div>
+                    <div class="bar" data-width="10%">
+                        <div class="bar-inner"></div>
+                        <div class="bar-percent">10%</div>
+                    </div>
+                </div>
+
+
+
                 <h2>....en graphisme</h2>
 
                 <div class="bar-photoshop skill-graph">
                     <div class="skill-title">Photosphop</div>
-                    <div class="bar" data-width="80%">
+                    <div class="bar" data-width="65%">
                         <div class="bar-inner"></div>
-                        <div class="bar-percent">80%</div>
+                        <div class="bar-percent">65%</div>
                     </div>
                 </div>
 
                 <div class="bar-illustrator skill-graph">
                     <div class="skill-title">Illustrator</div>
-                    <div class="bar" data-width="70%">
+                    <div class="bar" data-width="50%">
                         <div class="bar-inner"></div>
-                        <div class="bar-percent">70%</div>
+                        <div class="bar-percent">50%</div>
                     </div>
                 </div>
 
 
                 <div class="bar-indesign skill-graph">
                     <div class="skill-title">InDesign</div>
-                    <div class="bar" data-width="65%">
+                    <div class="bar" data-width="40%">
                         <div class="bar-inner"></div>
-                        <div class="bar-percent">65%</div>
+                        <div class="bar-percent">40%</div>
                     </div>
                 </div>
 
