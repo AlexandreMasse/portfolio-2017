@@ -510,4 +510,54 @@ $(document).ready(function() {
 
     }
 
+
+    /*******************************
+     * Click sur envoi de message
+     * *****************************/
+
+    var compteurEnvoi = 0;
+
+    $("form").on('submit', function(e) {
+        e.preventDefault();
+
+        var $this = $(this);
+
+        var nom = $('#form-nom').val();
+        var prenom = $('#form-prenom').val();
+        var email = $('#form-mail').val();
+        var sujet = $('#form-sujet').val();
+        var message = $('#form-message').val();
+
+        if(nom === '' || prenom === '' || email === '' || sujet === '' || message === '') {
+            alert('Tous les champs doivent êtres remplis');
+        } else {
+
+            $.ajax({
+                url: $this.attr('action'), // Le nom du fichier indiqué dans le formulaire
+                type: $this.attr('method'), // La méthode indiquée dans le formulaire
+                data: $this.serialize(), // envoie toutes les valeurs présentes dans le formulaire
+
+                dataType: 'json',
+
+                success: function(json) {
+                    if(json.reponse === 'ok') {
+                        compteurEnvoi++;
+                        if (compteurEnvoi > 1) {
+                            $("#form-reponse").text('Votre message a déjà été envoyé.');
+                        } else {
+                            $("#form-reponse").text('Votre message a été envoyé !');
+
+                            $("form [id^='form-']").val('');
+                        }
+
+                    } else {
+                        $("#form-reponse").text(json.reponse);
+                    }
+                }
+            });
+        }
+    });
+
+
+
 });

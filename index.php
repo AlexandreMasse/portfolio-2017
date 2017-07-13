@@ -524,27 +524,33 @@
 
         <section id="contact-content" class="section-container">
 
-            <h2>Contact</h2>
+            <div id="contact-content-title">
+                <h1>Contact</h1>
+                <hr>
+            </div>
 
-            <p>Envoyez moi un petit message !</p>
-            <form class="" action="index.php" method="post">
 
-                <input type="text" name="nom" placeholder="Nom" required>
+            <p>Une question ? Une idée ? Une proposition&nbsp;?</p>
+            <p>Laissez moi un message !</p>
 
-                <input type="text" name="prenom" placeholder="Prénom" required>
+            <form action="php/send.php" method="post">
 
-                <input type="email" name="email" placeholder="Adresse e-mail" required>
+                <input name="nom" id="form-nom" placeholder="Nom" required>
 
-                <input type="text" name="sujet" placeholder="Sujet" required>
+                <input name="prenom" id="form-prenom" placeholder="Prénom" required>
 
-                <textarea name="message" rows="5" cols="60" placeholder="Votre message" required=></textarea>
+                <input type="email" name="email" id="form-mail" placeholder="Adresse e-mail" required>
 
-                <?php
-                include 'php/send.php';
-                ?>
+                <input name="sujet" id="form-sujet" placeholder="Sujet" required>
+
+                <textarea name="message" rows="5" id="form-message" cols="60" placeholder="Message" required=></textarea>
 
                 <input type="submit" name="" value="Envoyer">
+
             </form>
+
+            <div id="form-reponse"></div>
+            
         </section>
     </main>
 
