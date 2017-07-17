@@ -31,11 +31,11 @@ gulp.task('sass', function() {
 // Tache browser sync avec injection CSS
 
 gulp.task('default',function() {
-   /* browserSync.init({
+    browserSync.init({
         server: {
             baseDir: "./"
         }
-    });*/
+    });
 
     gulp.watch('css/**/*.scss', ['sass']);
 });

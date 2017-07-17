@@ -34,16 +34,16 @@ $(document).ready(function() {
         //Afficher titre des sections
         setTimeout(function(){
             $(".about-title h1").fadeIn("slow");
-        },1000);
+        },800);
         setTimeout(function(){
             $(".work-title h1").fadeIn("slow");
-        },1200);
+        },1000);
         setTimeout(function(){
             $(".contact-title h1").fadeIn("slow");
-        },1400);
+        },1200);
         setTimeout(function(){
             $(".skill-title h1").fadeIn("slow");
-        },1600);
+        },1400);
 
     }
 

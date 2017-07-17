@@ -942,8 +942,8 @@ main section.cat {
 
 
 $about-delay : 1.5s;
-$about-duration : 1.8s;
-$about-interval : 170ms;
+$about-duration : 1.5s;
+$about-interval : 150ms;
 $about-function : ease;
 
 @keyframes aboutInLeft {
@@ -1408,7 +1408,7 @@ SKILL
 
 
 $skill-delay : 1.5s;
-$skill-duration : 1.8s;
+$skill-duration : 1.5s;
 $skill-interval : 170ms;
 $skill-function : ease;
 
@@ -1587,7 +1587,7 @@ CONTACT
 
 $contact-delay : 1.5s;
 $contact-duration : 1.8s;
-$contact-interval : 170ms;
+$contact-interval : 150ms;
 $contact-function : ease;
 
 #contact-content {
